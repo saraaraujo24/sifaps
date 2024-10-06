@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Cadastrar/cadastro.css">
+  <link rel="stylesheet" href="../Menu/menu.css">
+  <title>Perfil</title>
+</head>
+<body class="bodyLogin">
+    <div id="box">
+        <p id="output"></p>
+    </div>
+    <div>
+        <div class="menu">
+            <nav>
+                <div class="menu-icon" id="menuToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="close-icon" id="closeMenu" >&times;</div>
+                <ul class="ul">
+                    <li><a href="../Home/index.html">Home</a></li>
+                    <li><a href="../Home/saude-mental.html">Saúde Mental</a></li>
+                    <li><a href="../Home/publicaçao.html">Publicações</a></li>
+                    <li><a href="../Home/comentarios.html">Comentários</a></li>
+                    <li><a href="../Home/profissionais.html">Profissionais</a></li>
+                    <li><a href="../Perfil/perfil.html">Perfil</a></li>
+                    <li><a href="../Login/index.html"><img src="../../img/area1.png"></a></li>
+                </ul>
+                <div class="faixa-horizontal"></div>
+            </nav>
+        </div>
+    </div>
+    <p>Seja Bem-Vinda(o) </p>
+    <br></br> <br></br>
+    <h1 class="letraCadash1">Seus Dados</h1>
+<br><br>
+  <div >
+    <div class="formCadas-container">
+        <form id="formCadas-cadastro" onsubmit="enviarCadastro(event)" data-endpoint="/sifaps/backend/controllers/cadastro/inserir.php">
+            <div class="formCadas-row">
+                <div class="formCadas-group">
+                    <label for="cadastro-nome">Nome Completo:</label>
+                    <input type="text" id="cadastro-nome" name="nome" required/>
+                </div>
+                <div class="formCadas-group">
+                    <label for="cadastro-email">Email:</label>
+                    <input type="email" id="cadastro-email" name="email" required/>
+                </div>
+                <div class="formCadas-group">
+                    <label for="password">Crie uma Senha:</label>
+                    <input type="password" name="senha" placeholder="Digite sua senha" required />
+                </div>
+                <div class="formCadas-group">
+                    <label for="cadastro-celular">Celular:</label>
+                    <input type="text" name="celular" id="telefone" required/>
+                </div>
+                <div class="formCadas-group">
+                    <label for="cadastro-cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" required/>
+                </div>
+                <div class="formCadas-group">
+                    <label for="cadastro-estado">Estado:</label>
+                    <input type="text" id="estado" placeholder="Digite seu estado" oninput="buscarEstados()">
+                    <div id="autocomplete-container" class="autocomplete-list"></div>
+                </div>
+                <div class="formCadas-group">
+                    <label for="cadastro-cidade">Cidades:</label>
+                    <select id="cidade" onchange="selecionarCidade(this)" onkeydown="filtrarCidades(event)">
+                        <option value="">Selecione uma cidade</option>
+                    </select>
+                </div>
+                <div class="formCadas-group">
+                    <label for="cadastro-crp-crm">CRP/CRM:</label>
+                    <input type="text" id="cadastro-crp-crm" name="crp_crm" required/>
+                </div>
+                <div class="formCadasP-group">
+                    <label for="cadastro-profissao">Profissão:</label>
+                    <input type="text" id="cadastro-profissao" name="profissao" required/>
+                    <button type="submit">Salvar</button>
+                </div>
+                
+            </div>
+        </form>
+    </div>
+</div>
+
+<script src="../Cadastrar/apiestado.js"></script>
+</body>
+</html>

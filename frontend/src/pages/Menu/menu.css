@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+
+/*Mewnu*/
+
+nav {
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+}
+
+.ul {
+    font-size: 18px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8%;
+}
+
+.ul li a {
+    text-decoration: none;
+    color: #255868;
+}
+
+.ul li a img {
+    width: 60px;
+    height: 50px;
+}
+
+.menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 10px; /* Aumente o valor conforme necessário */
+    z-index: 10;
+    margin-left: 20px;
+}
+
+.menu-icon span {
+    display: block;
+    width: 50px;
+    height: 8px;
+    background-color: #255868;
+}
+
+.close-icon {
+    font-size: 50px; /* Tamanho do ícone de fechar */
+    color: white; /* Cor do ícone */
+    position: absolute; /* Para posicionar em relação ao menu */
+    top: 20px; /* Ajuste a posição */
+    right: 80px; /* Ajuste a posição */
+    cursor: pointer; /* Mão ao passar o mouse */
+    display: none; /* Esconder por padrão */
+    z-index: 20; /* Z-index alto para ficar acima de outros elementos */
+}
+
+/* Adicione esta classe para mostrar o ícone de fechar */
+.ul.ativo + .close-icon {
+    display: block; /* Mostra o ícone de fechar quando o menu está ativo */
+}
+
+#box {
+    width: 100%;
+    height: 40px;
+    background-color: #255868; 
+}
+
+.faixa-horizontal {
+    height: 5px; /* Espessura da faixa */
+    width: 100%; /* Largura da faixa, 100% da largura do contêiner */
+    background: var(--verde-escuro);
+    position: relative; /* Alinhamento relativo ao contêiner pai */
+    margin: 20px 0; /* Espaçamento acima e abaixo da faixa */
+}
+
+:root{
+    --verde-escuro: #21879D;
+}
+@media (max-width: 1200px) {
+    .ul{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 4%;
+    }
+
+    .ul li a {
+        font-size: 24px;
+    }
+    
+}
+@media (max-width: 980px) {
+    .menu-icon{
+        display: block;
+
+    }
+
+    .ul{
+        position: fixed;
+        background:#255868;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        left: 100%;
+        transition: 0.3s;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .ul li{
+        font-size: 20px;
+    
+        margin-top: 1px;
+    }
+    .ul.ativo{
+        left: 0;
+    }
+
+    .ul li a {
+        color: white;
+        font-size: 24px;
+    }
+
+    .ul li a img {
+        width: 60px;
+        height: 50px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,181 @@
+.letraCadash1 {
+    text-align: center;
+    color:#21879D;
+}
+
+/* Estilos para o contêiner do formCadasulário */
+.formCadas-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 10vh; /* Faz o contêiner ocupar a altura total da viewport */
+    padding: 30px; /* Adiciona um pouco de espaçamento ao redor */
+}
+
+#formCadas-cadastro{
+    width: 60%;
+}
+/* Estilos para agrupar campos lado a lado */
+.formCadas-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-bottom: 15px;
+}
+
+.formCadas-group {
+    flex: 1;
+    min-width: calc(20% - 20px); /* Ajuste a largura conformCadase necessário */
+    margin-bottom: 0; /* Remove o margin-bottom padrão para itens lado a lado */
+}
+
+
+.formCadas-group label {
+    display: block;
+    font-weight:normal;
+    margin-bottom: 5px;
+    color:#21879D;
+}
+
+.formCadas-group input,select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #21879D;
+    border-radius: 5px;
+}
+
+.formCadasP-group label {
+    font-weight:normal;
+    color:#21879D;
+}
+
+.formCadasP-group input {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #21879D;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #21879D;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 5%;
+}    
+
+button:hover {
+    background-color:  #21879D;
+}
+
+/* Estilos do modal */
+.modalCadas {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modalCadas-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.modalCadas-content h2 {
+    margin-top: 0;
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #333;
+}
+
+.close:hover {
+    color: #007bff;
+}
+
+/* Estilos da lista de usuários */
+#lista-usuarios {
+    list-style: none;
+    padding: 0;   
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Faz o contêiner ocupar a altura total da viewport */
+    padding: 20px;
+}
+
+#lista-usuarios li {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#lista-usuarios li button {
+    background-color: #28a745;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#lista-usuarios li button:hover {
+    background-color: #218838;
+}
+
+@media (min-width: 180px) and (max-width: 1000px) {
+    .formCadas-row {
+        display: flex;
+        flex-direction: column; /* Organiza os itens em uma coluna */
+        flex-wrap: wrap; /* Permite que os itens ocupem várias linhas, se necessário */
+        gap: 30px; /* Espaçamento entre os itens */
+        margin-bottom: 15px;
+    }    
+}
+
+@media (min-width: 1000px) and (max-width: 1700px) {
+    #formCadas-cadastro{
+        width: 90%;
+    } 
+}
+
+        /* Estilos para autocompletar */
+        .autocomplete-list {
+            border: 1px solid #ccc;
+            max-height: 150px;
+            overflow-y: auto;
+            position: absolute;
+            background-color: white;
+            width: 14.5%;
+        }
+
+        .autocomplete-item {
+            padding: 10px;
+            cursor: pointer;
+        }
+
+        .autocomplete-item:hover {
+            background-color: #ddd;
+        }

@@ -1,0 +1,170 @@
+
+.containerL{
+    margin-top: -7%;
+}
+
+.image_2login {
+    display: flex; /* Torna o contêiner um flex container */
+    justify-content: flex-end; /* Alinha o conteúdo do contêiner à direita */
+    margin-right: 6%; /* Adiciona algum preenchimento ao contêiner */
+    margin-top: 8%;
+}
+
+.image_2login img {
+    width: 40%; /* Ajusta a largura da imagem para 50% do contêiner pai */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+/* Estilo do container principal usando grid */
+.containerLogin {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Define duas colunas: 1 para a imagem e 2 para o formulário */
+    gap: 1px; /* Espaço entre a imagem e o formulário */
+    align-items: start; /* Alinha os itens ao topo do container */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+}
+
+/* Estilo da imagem */
+.imageContainer {
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+}
+
+.containerLogin2{
+    display: flex;
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center; /* Centraliza a imagem verticalmente */
+    margin-top: 5%;
+    width: 100%;
+}
+/* Estilo do formulário */
+.page {
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 10px 10px 40px rgba(0, 0, 0, 0.4);
+    padding: 20px; /* Adiciona algum preenchimento interno ao formulário */
+    width: 50%;
+}
+
+.img_login {
+    width: 100%; /* Ajusta a largura da imagem para 100% do contêiner pai */
+    max-width: 800px; /* Define um tamanho máximo para a imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    margin-top: -12%;
+    margin-left: 12%;
+}
+
+.formLogin h1 {
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+    font-size: 2.3em;
+   
+}
+
+.formLogin p {
+    font-size: 16px;
+    margin-bottom: 20px; /* Espaço abaixo do parágrafo */
+}
+
+.formLogin label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px; /* Espaço abaixo dos labels */
+    display: block; /* Garante que o label ocupe uma linha completa */
+    color:#21879D;
+}
+
+.formLogin input[type="text"],
+.formLogin input[type="login"],
+.formLogin input[type="email"],
+.formLogin input[type="password"] {
+    padding: 15px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: all linear 160ms;
+    outline: none;
+    width: 90%;
+    margin-bottom: 10px; /* Espaço abaixo dos campos de entrada */
+    border: 1px solid #21879D; /* Define a cor da borda e sua espessura */
+}
+
+.formLogin a {
+    display: block;
+    margin-bottom: 10px; /* Espaço abaixo do link */
+}
+
+.btnLogin {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color:#fff;
+    color:  #21879D;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    border: 1px solid #21879D; /* Define a cor da borda e sua espessura */
+}
+
+.btnLogin:hover {
+    background-color: #21879D; /* Cor de fundo do botão ao passar o mouse */
+}
+
+.btnLogin1 {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: none;
+    border-radius: 4px;
+    background-color: #21879D;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btnLogin1:hover {
+    background-color: #21879D; /* Cor de fundo do botão ao passar o mouse */
+}
+
+@media (max-width: 720px) {
+    .image_2login {
+        display: flex; /* Torna o contêiner um flex container */
+        justify-content: center; /* Alinha o conteúdo do contêiner à direita */
+        margin-right: 6%; /* Adiciona algum preenchimento ao contêiner */
+        margin-top: 2%;
+    }
+
+    .image_2login img {
+        width: 30%; /* Ajusta a largura da imagem para 50% do contêiner pai */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+
+    /* Estilo do container principal usando grid */
+    .containerLogin {
+        grid-template-columns: 1fr; /* Muda para uma coluna em telas menores */
+        justify-items: center; /* Centraliza os itens horizontalmente em cada célula */
+        align-items: center; /* Centraliza os itens verticalmente em cada célula */
+        padding: 20px; /* Manter o preenchimento */
+    }
+        /* Estilo da imagem */
+    .imageContainer {
+        display: flex;
+        justify-content: center; /* Centraliza a imagem horizontalmente */
+        align-items: center; /* Centraliza a imagem verticalmente */
+        margin-top: 8%;
+    }
+
+    .img_login {
+        width: 100%; /* Ajusta a largura da imagem para 100% do contêiner pai */
+        max-width: 200px; /* Define um tamanho máximo para a imagem */
+        height: auto; /* Mantém a proporção da imagem */
+        align-items: center;
+        justify-items: center;
+    }
+    
+}
+
+
+
+
