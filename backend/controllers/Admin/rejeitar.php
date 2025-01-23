@@ -20,7 +20,7 @@ if (!$PDO) {
     exit;
 }
 
-$sql = "UPDATE cadastroProf SET status = 'rejeitado' WHERE idProfissional = :id";
+$sql = "UPDATE usuarios SET status = 'rejeitado' WHERE id = :id";
 $stmt = $PDO->prepare($sql);
 $stmt->bindParam(':id', $id);
 

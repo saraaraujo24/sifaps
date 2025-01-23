@@ -1,0 +1,74 @@
+.casa .container-casa{
+    display: flex;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.casa .casa-img{
+    width: 50%;
+}
+
+.casa .casa-img img{
+    width: 100%;
+    border-radius: 10px;
+}
+
+.casa .casa-text{
+    width: 100%;
+    padding-left: 90px;
+}
+
+.casa .casa-text h2{
+    font-size: 2.0em;
+    line-height: 1.5em;
+    color: #044553;
+}
+
+.casa .casa-text p{
+    max-width: 20px 0;
+    color: #21879D;
+    font-size: 1.1em; ;
+}
+
+.casa .casa-text p b{
+    color: black;
+    font-size: 25px;
+}
+
+/* --- Estilização Responsiva --- */
+@media (max-width: 768px) {
+    .casa .container-casa {
+        flex-direction: column; /* Alinha os itens em coluna */
+        text-align: center; /* Centraliza o texto */
+    }
+
+    .casa .casa-img, .casa .casa-text {
+        width: 60%; /* Ocupa toda a largura */
+        padding-left: 0; /* Remove o padding esquerdo */
+    }
+
+    .casa .casa-text h2 {
+        font-size: 1.8em; /* Reduz o tamanho do texto */
+    }
+
+    .casa .casa-text p {
+        font-size: 1em; /* Ajusta o tamanho do texto */
+    }
+    .section-saude{
+        margin-top: 10%;
+    }
+}
+
+@media (max-width: 480px) {
+    .casa .container-casa {
+        padding: 0 10px; /* Reduz o espaçamento lateral */
+    }
+
+    .casa .casa-text h2 {
+        font-size: 1.5em; /* Tamanho menor para telas pequenas */
+    }
+
+    .casa .casa-text p {
+        font-size: 0.9em; /* Ajusta ainda mais o texto */
+    }
+}

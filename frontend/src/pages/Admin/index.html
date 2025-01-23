@@ -4,168 +4,439 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lista de Profissionais</title>
-   
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            margin: 0;
-            padding: 20px;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 20px;
-        }
-        th, td {
-            border: 1px solid #ddd;
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background-color: #3498db;
-            color: white;
-        }
-        .btn {
-            padding: 5px 10px;
-            margin: 0 5px;
-            border: none;
-            cursor: pointer;
-        }
-        .approve {
-            background-color: #28a745;
-            color: white;
-        }
-        .reject {
-            background-color: #dc3545;
-            color: white;
-        }
-    </style>
+    <link rel="stylesheet" href="admin.css"/>
+    <link rel="stylesheet" href="../Home/style.css"/>
+    <link rel="stylesheet" href="../Home/dropdown.css"/>
 </head>
 <body>
-    <h1>Lista de Profissionais</h1>
-    <table id="profissionaisTable">
-        <thead>
-            <tr>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Email</th>
-                <th>Celular</th>
-                <th>CPF</th>
-                <th>Cidade</th>
-                <th>Estado</th>
-                <th>CRP/CRM</th>
-                <th>Profissão</th>
-                <th>Data do Cadastro</th>
-                <th>Ações</th>
-            </tr>
-        </thead>
-        <tbody>
-            <!-- Os dados dos profissionais serão inseridos aqui -->
-        </tbody>
-    </table>
-    <table>
-        <thead>
-            <tr>
-                <th>Aprovados</th>
-                <th>Rejeitados</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>
-                    <ul id="aprovadosList"></ul>
-                </td>
-                <td>
-                    <ul id="rejeitadosList"></ul>
-                </td>
-            </tr>
-        </tbody>
-    </table>
-    <script>
-        document.addEventListener('DOMContentLoaded', async () => {
-            try {
-                const response = await fetch('/sifaps/backend/controllers/Admin/listarCadastro.php');
-                const result = await response.json();
+    <!-- inicio do menu-->
+    <div id="box">
+        <p id="output"></p>
+    </div>
+    <div >
+        <header>
+            <div class="menu">
+                <nav>
+                    <ul class="ul">
+                        <li><a href="../Home/index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">Saúde Mental</a>
+                            <div class="dropdown-content">
+                                <a href="../SaudeMental/saude-mental.html"><h5>O Que é Saúde Mental?</h5></a>
+                                <a href="../ComoseCuidar/como-se-cuidar.html"><h5>Como Se Cuidar?</h5></a>
+                            </div>
+                        </li> 
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">Publicações</a>
+                            <div class="dropdown-content">
+                                <a href="../Videos/videos.html"><h5>Videos</h5></a>
+                            </div>
+                        </li>
+                        <li><a href="../comentarios/index.php">Comentários</a></li>
+                        <li><a href="../meu_projeto/visualizar.php">Profissionais</a></li>
+                        <li><a href="../Perfil/perfil.html">Perfil</a></li>
+                        <li><a href="../Login/index.html"><img src="../../img/user.png"></a></li>
+                    </ul>              
+                    <div class="menu-icon">
+                        <img src="../../img/menu.png" alt="menu">
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="faixa-horizontal"></div>
+    </div>
+    <!-- fim-->
+    <section class="section-admin">
+        <div class="div-admin">
+            <h1 class="h1-admin">Gestão de Listas</h1>
+            <!-- Filtro para escolher entre Profissionais e Usuários -->
+            <label  class="filterSelect-label" for="filterSelect-label">Escolha uma lista:</label>
+            <select id="filterSelect">
+                <option value="profissionais">Profissionais</option>
+                <option value="usuarios">Usuários</option>
+            </select>
+        </div>
     
-                if (result.status === 'success') {
-                    const tableBody = document.getElementById('profissionaisTable').querySelector('tbody');
-                    result.data.forEach(profissional => {
-                        const row = document.createElement('tr');
-                        row.innerHTML = `
-                            <td>${profissional.idProfissional}</td>
-                            <td>${profissional.nome}</td>
-                            <td>${profissional.email}</td>
-                            <td>${profissional.celular}</td>
-                            <td>${profissional.cpf}</td>
-                            <td>${profissional.cidade}</td>
-                            <td>${profissional.estado}</td>
-                            <td>${profissional.crp_crm}</td>
-                            <td>${profissional.profissao}</td>
-                            <td>${formatarData(profissional.data_cadastro)}</td> 
-                            <td>
-                                <button class="btn approve" onclick="aprovarCadastro(${profissional.idProfissional})">Aprovar</button>
-                                <button class="btn reject" onclick="rejeitarCadastro(${profissional.idProfissional})">Rejeitar</button>
-                            </td>
-                        `;
-                        tableBody.appendChild(row);
-                    });
-                } else {
-                    console.error(result.message);
-                    alert('Erro ao carregar dados.');
-                }
-            } catch (error) {
-                console.error('Erro:', error);
-                alert('Erro ao buscar dados. Tente novamente.');
+        <!-- Contêiner de Profissionais -->
+        <div id="profissionaisContainer">
+            <h1>Lista de Profissionais</h1>
+            <table id="profissionaisTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        <th>CPF</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>CRP/CRM</th>
+                        <th>Profissão</th>
+                        <th>Data do Cadastro</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados dos profissionais serão inseridos aqui -->
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aprovados</th>
+                        <th>Rejeitados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul id="aprovadosList"></ul>
+                        </td>
+                        <td>
+                            <ul id="rejeitadosList"></ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    
+        <!-- Contêiner de Usuários -->
+        <div id="usuariosContainer" style="display: none;">
+            <h1>Lista de Usuários</h1>
+            <table id="usuariosTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Nome Usuários</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        <th>CPF</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Data do Cadastro</th>
+                        <th>Ações</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados dos usuários serão inseridos aqui -->
+                </tbody>
+            </table>
+        </div>
+        <!-- Contêiner de Usuários Rejeitados -->
+        <div id="usuariosContainer_rejeitado" style="display: none;" >
+            <h1>Usuários Rejeitados</h1>
+            <table id="usuariosTable-regeitado">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Nome Usuários</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        <th>CPF</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Data do Cadastro</th>
+                        <th>Ações</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Os dados dos usuários serão inseridos aqui -->
+                </tbody>
+            </table>
+        </div>
+
+
+    </section>
+    
+    
+    <footer>
+        <div class="container">
+        <ul>
+            <h3 class="colorido">SIFAPS</h3><!-- REbeca 23/10/2024-->
+            <p>
+                Sifaps é uma forma de oferecer apoio e informação para familiares de pessoas com transtornos.<!-- REbeca 23/10/2024-->
+                 Reconhecemos os desafios emocionais e práticos que essas famílias enfrentam e queremos ser uma fonte de recursos e orientação.
+                 Acreditamos que, ao promover a compreensão e a empatia, podemos fortalecer o suporte a esses indivíduos. 
+                No Sifaps, buscamos criar um espaço seguro e acolhedor, onde todos possam encontrar amor, esperança e ferramentas para enfrentar essa jornada.</p>
+            <div class="redes-sociais">
+                <img src="../../img/facebook.png" alt="Facebook">
+                <img src="../../img/twitter.png" alt="X">
+                <img src="../../img/instagram.png" alt="Instagram">
+                <img src="../../img/linkedin.png" alt="Linkedin">
+            </div>
+        </ul>
+        <ul>
+            <h3>Links</h3>
+            <li><a href="#">Home</a></li><!-- REbeca 23/10/2024-->
+            <li><a href="#">Saúde Mental</a></li>
+            <li><a href="#">Publicações</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Livros</a></li>
+        </ul>
+        <ul>
+            <h3>FAQ</h3>
+            <li><a href="#">Como funciona</a></li>
+            <li><a href="#">Caraccteristicas</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Comunicando</a></li>
+        </ul>
+        <ul>
+            <h3>Nos Contate</h3>
+            <li><p>(35)997317199</p></li>
+            <li><p>email@email.com</p></li>
+            <li><p>BRASIL</p></li>
+        </ul>
+
+    </div>
+</footer>
+<script src="../Home/main.js"></script>
+<script src="lista.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterSelect = document.getElementById('filterSelect');
+        const profissionaisContainer = document.getElementById('profissionaisContainer');
+        const usuariosContainer = document.getElementById('usuariosContainer');
+        const usuariosContainer_rejeitado = document.getElementById ('usuariosContainer_rejeitado');
+        // Evento para alternar entre os contêineres
+        filterSelect.addEventListener('change', (event) => {
+            const selectedValue = event.target.value;
+
+            if (selectedValue === 'profissionais') {
+                profissionaisContainer.style.display = 'block'; // Mostra o contêiner de profissionais
+                usuariosContainer.style.display = 'none'; // Oculta o contêiner de usuários
+                usuariosContainer_rejeitado.style.display = 'none';
+            } else if (selectedValue === 'usuarios') {
+                usuariosContainer_rejeitado.style.display = 'block';
+                usuariosContainer.style.display = 'block'; // Mostra o contêiner de usuários
+                profissionaisContainer.style.display = 'none'; // Oculta o contêiner de profissionais
             }
         });
-    
-        function formatarData(dataString) {
-            const data = new Date(dataString);
-            const dia = String(data.getDate()).padStart(2, '0');
-            const mes = String(data.getMonth() + 1).padStart(2, '0'); // Mes começa em 0
-            const ano = data.getFullYear();
-            
-            return `${dia}/${mes}/${ano}`;
-        }
+    });
 
-        async function aprovarCadastro(id) {
-            console.log("ID a ser aprovado:", id); // Adicione esta linha
-            try {
-                const response = await fetch('/sifaps/backend/controllers/Admin/aprovar.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ id })
-                });
-                const result = await response.json();
-                alert(result.message);
-                location.reload(); 
-            } catch (error) {
-                console.error('Erro:', error);
-                alert('Erro ao aprovar cadastro. Tente novamente.');
-            }
-        }
-    
-        async function rejeitarCadastro(id) {
-            try {
-                const response = await fetch('/sifaps/backend/controllers/Admin/rejeitar.php', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body: JSON.stringify({ id })
-                });
-                const result = await response.json();
-                alert(result.message);
-                location.reload(); 
-            } catch (error) {
-                console.error('Erro:', error);
-                alert('Erro ao rejeitar cadastro. Tente novamente.');
-            }
-        }
-    </script>
-    <script src="lista.js"></script>
+</script>
 </body>
 </html>   
+
+
+
+
+<!--<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Profissionais</title>
+    <link rel="stylesheet" href="admin.css"/>
+    <link rel="stylesheet" href="../Home/style.css"/>
+    <link rel="stylesheet" href="../Home/dropdown.css"/>
+</head>
+<body>
+
+    <div id="box">
+        <p id="output"></p>
+    </div>
+    <div >
+        <header>
+            <div class="menu">
+                <nav>
+                    <ul class="ul">
+                        <li><a href="../Home/index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">Saúde Mental</a>
+                            <div class="dropdown-content">
+                                <a href="../SaudeMental/saude-mental.html"><h5>O Que é Saúde Mental?</h5></a>
+                                <a href="../ComoseCuidar/como-se-cuidar.html"><h5>Como Se Cuidar?</h5></a>
+                            </div>
+                        </li> 
+                        <li class="dropdown">
+                            <a href="javascript:void(0)" class="dropbtn">Publicações</a>
+                            <div class="dropdown-content">
+                                <a href="../Videos/videos.html"><h5>Videos</h5></a>
+                            </div>
+                        </li>
+                        <li><a href="../comentarios/index.php">Comentários</a></li>
+                        <li><a href="../profissional/profissional.html">Profissionais</a></li>
+                        <li><a href="../Perfil/perfil.html">Perfil</a></li>
+                        <li><a href="../Login/index.html"><img src="../../img/user.png"></a></li>
+                    </ul>              
+                    <div class="menu-icon">
+                        <img src="../../img/menu.png" alt="menu">
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="faixa-horizontal"></div>
+    </div>
+
+    <section class="section-admin">
+        <div class="div-admin">
+            <h1 class="h1-admin">Gestão de Listas</h1>
+            !-- Filtro para escolher entre Profissionais e Usuários --
+            <label for="filterSelect">Escolha uma lista:</label>
+            <select id="filterSelect">
+                <option value="profissionais">Profissionais</option>
+                <option value="usuarios">Usuários</option>
+            </select>
+        </div>
+    
+        -- Contêiner de Profissionais --
+        <div id="profissionaisContainer">
+            <h1>Lista de Profissionais</h1>
+            <table id="profissionaisTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        <th>CPF</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>CRP/CRM</th>
+                        <th>Profissão</th>
+                        <th>Data do Cadastro</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    !-- Os dados dos profissionais serão inseridos aqui --
+                </tbody>
+            </table>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Aprovados</th>
+                        <th>Rejeitados</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            <ul id="aprovadosList"></ul>
+                        </td>
+                        <td>
+                            <ul id="rejeitadosList"></ul>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        !-- Contêiner de Usuários --
+        <div id="usuariosContainer" style="display: none;">
+            <h1>Lista de Usuários</h1>
+            <table id="usuariosTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        <th>CPF</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Data do Cadastro</th>
+                        <th>Ações</th> 
+                    </tr>
+                </thead>
+                <tbody>
+                    !-- Os dados dos usuários serão inseridos aqui --
+                </tbody>
+            </table>
+        </div>
+        -- Contêiner de Usuários Rejeitados --
+        <div id="usuariosRejeitadosContainer" style="display: none;">
+            <h1>Lista de Usuários Rejeitados</h1>
+            <table id="usuariosRejeitadosTable">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Celular</th>
+                        <th>CPF</th>
+                        <th>Cidade</th>
+                        <th>Estado</th>
+                        <th>Data do Cadastro</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                     Os dados dos usuários rejeitados serão inseridos aqui 
+                </tbody>
+            </table>
+        </div>
+
+
+    </section>
+    
+    
+    <footer>
+        <div class="container">
+        <ul>
+            <h3 class="colorido">SIFAPS</h3>-- REbeca 23/10/2024--
+            <p>
+                Sifaps é uma forma de oferecer apoio e informação para familiares de pessoas com transtornos.
+                 Reconhecemos os desafios emocionais e práticos que essas famílias enfrentam e queremos ser uma fonte de recursos e orientação.
+                 Acreditamos que, ao promover a compreensão e a empatia, podemos fortalecer o suporte a esses indivíduos. 
+                No Sifaps, buscamos criar um espaço seguro e acolhedor, onde todos possam encontrar amor, esperança e ferramentas para enfrentar essa jornada.</p>
+            <div class="redes-sociais">
+                <img src="../../img/facebook.png" alt="Facebook">
+                <img src="../../img/twitter.png" alt="X">
+                <img src="../../img/instagram.png" alt="Instagram">
+                <img src="../../img/linkedin.png" alt="Linkedin">
+            </div>
+        </ul>
+        <ul>
+            <h3>Links</h3>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Saúde Mental</a></li>
+            <li><a href="#">Publicações</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Livros</a></li>
+        </ul>
+        <ul>
+            <h3>FAQ</h3>
+            <li><a href="#">Como funciona</a></li>
+            <li><a href="#">Caraccteristicas</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Comunicando</a></li>
+        </ul>
+        <ul>
+            <h3>Nos Contate</h3>
+            <li><p>(35)997317199</p></li>
+            <li><p>email@email.com</p></li>
+            <li><p>BRASIL</p></li>
+        </ul>
+
+    </div>
+</footer>
+<script src="../Home/main.js"></script>
+<script src="lista.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const filterSelect = document.getElementById('filterSelect');
+        const profissionaisContainer = document.getElementById('profissionaisContainer');
+        const usuariosContainer = document.getElementById('usuariosContainer');
+
+        // Evento para alternar entre os contêineres
+        filterSelect.addEventListener('change', (event) => {
+            const selectedValue = event.target.value;
+
+            if (selectedValue === 'profissionais') {
+                profissionaisContainer.style.display = 'block'; // Mostra o contêiner de profissionais
+                usuariosContainer.style.display = 'none'; // Oculta o contêiner de usuários
+            } else if (selectedValue === 'usuarios') {
+                usuariosContainer.style.display = 'block'; // Mostra o contêiner de usuários
+                profissionaisContainer.style.display = 'none'; // Oculta o contêiner de profissionais
+            }
+        });
+    });
+
+</script>
+</body>
+</html>   -->
+

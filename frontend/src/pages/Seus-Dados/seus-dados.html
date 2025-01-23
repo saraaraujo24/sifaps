@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../Cadastrar/cadastro.css"/>
+  <link rel="stylesheet" href="../Home/style.css"/>
+  <link rel="stylesheet" href="seus-dados.css"/>
+  <title>Perfil</title>
+</head>
+<style>
+    .nav-perfil{
+        padding: 18px 0;
+    }
+</style>
+<body class="bodyLogin">
+  <!-- inicio do menu-->
+  <div id="box">
+    <p id="output"></p>
+</div>
+<div>
+    <header>
+        <div class="menu">
+            <nav class="nav-perfil">
+                <ul class="ul" id="menu-list">
+                    <li><a href="../Home/index.html">Página inicial</a></li>
+                    <li><a href="../Perfil/perfil.html">Home</a></li>
+                    <li><a href="../CriarPublicações/index.php">Criar Publicações</a></li>
+                    <li><a href="../meu_projeto/index.html">Criar Perfil</a></li>
+                    <li><a href="../Seus-Dados/seus-dados.html">Seus Dados</a></li>
+                </ul>              
+                <div class="menu-icon">
+                    <img src="../../img/menu.png" alt="menu">
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="faixa-horizontal"></div>
+</div>
+<!-- fim-->
+     <section>
+  
+  
+  <h1 class="letraCadash2">Seus Dados</h1>
+  <div>
+    <div class="formCadas-container">
+        <form id="formCadas-cadastro" onsubmit="enviarCadastro(event)">
+            <div class="formCadas-row">
+                <input type="hidden" id="id" name="id" />
+                <div class="formCadas-group">
+                    <label for="cadastro-nome">Nome Completo:</label>
+                    <input type="text" id="cadastro-nome" name="nome" autocomplete="name" required />
+                </div>
+                <div class="formCadas-group">
+                    <label for="cadastro-nome">Nome de usuário:</label>
+                    <input type="text" id="nome_usuario" name="nome_usuario" autocomplete="name" required />
+                </div>
+                <div class="formCadas-group">
+                    <label for="cadastro-email">Email:</label>
+                    <input type="email" id="cadastro-email" name="email" autocomplete="email" required />
+                </div>
+                <div class="formCadas-group">
+                    <label for="telefone">Celular:</label>
+                    <input type="tel" name="celular" id="telefone" autocomplete="tel" required />
+                </div>
+                <div class="formCadas-group">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" id="cpf" name="cpf" autocomplete="off" required />
+                </div>
+                <div class="formCadas-group">
+                    <label for="estado">Estado:</label>
+                    <input type="text" id="estado" name="estado" autocomplete="address-level1" required />
+                </div>
+                <div class="formCadas-group">
+                    <label for="cidade">Cidades:</label>
+                    <input type="text" id="cidade" name="cidade" autocomplete="address-level2" required />
+                </div>
+                <div class="formCadas-group">
+                    <label for="cadastro-crp-crm">CRP/CRM:</label>
+                    <input type="text" id="cadastro-crp-crm" name="crp_crm" autocomplete="off" required />
+                </div>
+                <div class="formCadasP-group">
+                    <label for="cadastro-profissao">Profissão:</label>
+                    <input  type="text" id="cadastro-profissao" name="profissao" autocomplete="off" required />
+                </div>              
+                
+            </div>
+            <div class="formCadas-containerbtn">
+                <button  type="submit">Cadastrar</button>
+            </div>       
+        </form>
+    </div>
+  </div>
+</section>
+  <footer>
+    <div class="container">
+    <ul>
+        <h3 class="colorido">SIFAPS</h3><!-- REbeca 23/10/2024-->
+        <p>
+            Sifaps é uma forma de oferecer apoio e informação para familiares de pessoas com transtornos.<!-- REbeca 23/10/2024-->
+             Reconhecemos os desafios emocionais e práticos que essas famílias enfrentam e queremos ser uma fonte de recursos e orientação.
+             Acreditamos que, ao promover a compreensão e a empatia, podemos fortalecer o suporte a esses indivíduos. 
+            No Sifaps, buscamos criar um espaço seguro e acolhedor, onde todos possam encontrar amor, esperança e ferramentas para enfrentar essa jornada.</p>
+        <div class="redes-sociais">
+            <img src="../../img/facebook.png" alt="Facebook">
+            <img src="../../img/twitter.png" alt="X">
+            <img src="../../img/instagram.png" alt="Instagram">
+            <img src="../../img/linkedin.png" alt="Linkedin">
+        </div>
+    </ul>
+    <ul>
+        <h3>Links</h3>
+        <li><a href="#">Home</a></li><!-- REbeca 23/10/2024-->
+        <li><a href="#">Saúde Mental</a></li>
+        <li><a href="#">Publicações</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Livros</a></li>
+    </ul>
+    <ul>
+        <h3>FAQ</h3>
+        <li><a href="#">Como funciona</a></li>
+        <li><a href="#">Caraccteristicas</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Comunicando</a></li>
+    </ul>
+    <ul>
+        <h3>Nos Contate</h3>
+        <li><p>(35)997317199</p></li>
+        <li><p>email@email.com</p></li>
+        <li><p>BRASIL</p></li>
+    </ul>
+
+</div>
+</footer>
+
+<script src="seus-dados.js"></script>
+  <script src="../Cadastrar/apiestado.js"></script>
+  <script src="../Home/main.js"></script>
+  <script src="../Menu/ocultar-item-menu.js"></script>
+  <script src="../Menu/ocultar-criar-Publi.js"></script>
+</body>
+</html>

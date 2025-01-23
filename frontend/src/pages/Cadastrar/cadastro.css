@@ -1,20 +1,31 @@
 .letraCadash1 {
     text-align: center;
-    color:#21879D;
+    color :#21869dde;
+    font-size: 1.8rem;
 }
 
+.letraCadah1 {
+    text-align: center;
+    color :#21869dde;
+    font-size: 1.3rem;
+}
 /* Estilos para o contêiner do formCadasulário */
 .formCadas-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 10vh; /* Faz o contêiner ocupar a altura total da viewport */
-    padding: 30px; /* Adiciona um pouco de espaçamento ao redor */
 }
 
 #formCadas-cadastro{
-    width: 60%;
-}
+    display: flex;          /* Ativa o modelo de layout flexbox */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente */
+    flex-direction: column;  /* Alinha os itens em coluna */
+    width: 80%;              /* Define a largura do formulário */
+    margin: 0 auto;          /* Garante que o formulário tenha margem automática nas laterais */
+     
+} 
 /* Estilos para agrupar campos lado a lado */
 .formCadas-row {
     display: flex;
@@ -145,21 +156,25 @@ button:hover {
     background-color: #218838;
 }
 
-@media (min-width: 180px) and (max-width: 1000px) {
+@media (min-width: 180px) and (max-width: 900px) {
     .formCadas-row {
         display: flex;
         flex-direction: column; /* Organiza os itens em uma coluna */
         flex-wrap: wrap; /* Permite que os itens ocupem várias linhas, se necessário */
         gap: 30px; /* Espaçamento entre os itens */
         margin-bottom: 15px;
+        width: 100%;
     }    
+    .formCadasP-group input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #21879D;
+        border-radius: 5px;
+    }
+    
 }
 
-@media (min-width: 1000px) and (max-width: 1700px) {
-    #formCadas-cadastro{
-        width: 90%;
-    } 
-}
+
 
         /* Estilos para autocompletar */
         .autocomplete-list {
@@ -179,3 +194,83 @@ button:hover {
         .autocomplete-item:hover {
             background-color: #ddd;
         }
+
+/* Contêiner principal */
+.user-type-container {
+    margin-bottom: 20px; /* Espaço inferior */
+    font-family: 'Roboto', sans-serif; /* Fonte moderna e limpa */
+    color: #21879D; /* Cor do texto, escuro e profissional */
+
+}
+
+/* Label principal */
+.user-type-label {
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: 600; /* Peso da fonte */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    display: block; /* Garante que o título ocupe a linha toda */
+    text-align: left; /* Alinhamento à esquerda */
+}
+
+/* Contêiner dos botões de radio */
+.radio-group {
+    display:block; /* Usamos flexbox para alinhar os itens horizontalmente */
+    margin-top: 10px;
+}
+
+/* Cada opção de rádio */
+.radio-option {
+    display: flex; /* Flexbox para alinhar o input e o label */
+    margin-bottom: 10px;
+}
+
+/* Estilizando o botão de rádio */
+.radio-option input[type="radio"] {
+    width: 18px; /* Tamanho do botão de rádio */
+    height: 18px; /* Tamanho do botão de rádio */
+    margin-right: 8px; /* Espaço entre o botão de rádio e o label */
+    accent-color:  #21879D; /* Cor do botão de rádio quando selecionado */
+}
+
+/* Estilizando o texto do label */
+.radio-option label {
+    font-size: 1rem; /* Tamanho do texto */
+    font-weight: 500; /* Peso mais leve para os labels */
+    cursor: pointer; /* Cursor de pointer para indicar interatividade */
+    transition: color 0.3s; /* Efeito suave na cor */
+}
+
+/* Efeito de foco nos labels */
+.radio-option label:hover {
+    color: #21879D; /* Cor do texto quando o usuário passar o mouse */
+}
+
+
+@media (min-width: 120px) and (max-width: 500px) {
+    .letraCadah1 {
+        text-align: center;
+        color :#21869dde;
+        font-size: 1.0rem;
+    }
+    .user-type-label {
+        font-size: 0.9rem; /* Tamanho da fonte */
+        font-weight: 600; /* Peso da fonte */
+        margin-bottom: 10px; /* Espaço abaixo do título */
+        display: block; /* Garante que o título ocupe a linha toda */
+        text-align: left; /* Alinhamento à esquerda */
+    }
+}
+
+.inputProfissao {
+    width: 50%; /* Altere o valor conforme o tamanho desejado (ex: 50%, 200px, etc.) */
+    max-width: 280px; /* Define um limite máximo para evitar que o campo fique muito grande */
+    min-width: 150px; /* Define um limite mínimo para responsividade */
+}
+
+.sectionForms-cadastro {
+
+    height: 600px; /* Altura máxima */
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto; /* Permite rolagem vertical, se o conteúdo exceder a altura máxima */
+}

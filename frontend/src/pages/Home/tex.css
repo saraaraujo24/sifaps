@@ -1,0 +1,198 @@
+
+
+/* css Rebeca*/
+
+/* Container para o texto  texto da pagina inicial*/
+.containerini {
+   
+    padding: 15px; /* Aumentar o padding */
+    border-radius: 8px;
+
+}
+/* Estilo do texto */
+.pini {
+    font-size: 1.3em; /* Aumentar o tamanho da fonte */
+    margin-bottom: 20px; /* Aumentar a margem entre parágrafos */
+    color: aliceblue;
+    text-align: center;
+}
+.botao{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centraliza verticalmente */
+    align-items: center; /* Centraliza horizontalmente */
+    height: 100%; /* Faz o contêiner ocupar toda a altura da tela */
+    text-align: center; /* Centraliza o texto */
+}
+
+.btn-ver-mais {
+    background-color: #21879D; /* Cor de fundo do botão ver mais */
+    color: white; /* Cor do texto */
+    border: none; /* Sem borda */
+    padding: 15px 25px; /* Espaçamento interno */
+    text-align: center; /* Centraliza o texto */
+    text-decoration: none; /* Remove o sublinhado */
+    display: inline-block; /* Permite adicionar margens */
+    font-size: 16px; /* Tamanho da fonte */
+    margin-top: 5px; /* Margem acima do botão */
+    cursor: pointer; /* Cursor em forma de mão */
+    border-radius: 5px; /* Cantos arredondados */
+}
+
+.btn-ver-mais:hover {
+    background-color: #0056b3; /* Cor ao passar o mouse */
+}
+
+.bold-text {
+    font-weight: 600; /* Peso da fonte em negrito */
+}
+
+#mais-conteudo {
+    display: none; /* Inicialmente escondido */
+    margin-top: 20px; /* Margem acima do conteúdo adicional */
+}
+.casa .casa-text{
+    width: 50%;
+    color: #13505e;
+}
+.casa .casa-text p{
+    max-width: 20px 0;
+    color: #21879D;
+}
+.colorido {
+    color: whitesmoke; /* Vermelho com 50% de opacidade */
+    
+}
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
+.center {
+  width: 240px; /* Aumentado */
+  height: 80px; /* Aumentado */
+  position: relative;
+}
+
+.btn {
+    display: flex; /* Adicionado */
+    align-items: center; /* Adicionado */
+    justify-content: center; /* Adicionado */
+    width: 240px; /* Aumentado */
+    height: 80px; /* Aumentado */
+    cursor: pointer;
+    background: transparent;
+    border: 2px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+  }
+  
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+  stroke: #fff;
+  stroke-dasharray: 150 480;
+  stroke-dashoffset: 150;
+  transition: 1s ease-in-out;
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #255868;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 28px; /* Aumentado */
+  font-weight: 100;
+}
+.sug {
+  /* Aumentar a margem entre parágrafos */
+  color:#13505e;
+  text-align: left;
+}
+
+@media (max-width: 960px) {
+  /* Esconder o botão de inscrição (faça sua inscrição) quando a tela for menor que 960px */
+  .btn-ver-mais {
+      display: none; /* Esconde o botão */
+  }
+ .botao {
+  display: none;
+ }
+  .btn span {
+  display: none;
+  }
+
+  .btn{
+    visibility: hidden;
+  }
+
+  svg {
+    visibility: hidden;
+  }
+
+  /* Ajustando o tamanho da fonte e o layout */
+  .pini {
+      font-size: 1.2em; /* Tamanho de fonte ajustado para telas menores */
+  }
+
+  /* Ajuste da largura do conteúdo */
+  .casa .casa-text {
+      width: 100%; /* Ocupa toda a largura em telas menores */
+      padding-left: 0; /* Remove o padding */
+  }
+}
+
+/* Ajustes para telas menores que 768px */
+@media (max-width: 768px) {
+  /* Ajuste no botão */
+  .btn-ver-mais {
+      padding: 12px 22px; /* Reduzir o padding */
+      font-size: 14px; /* Tamanho de fonte ajustado */
+  }
+
+  .btn {
+      width: 200px; /* Largura reduzida */
+      height: 60px; /* Altura reduzida */
+  }
+
+  .btn span {
+      font-size: 20px; /* Reduzir o tamanho da fonte no botão */
+  }
+
+  .pini {
+      font-size: 1.3em; /* Ajuste no tamanho da fonte */
+  }
+
+  .casa .casa-text {
+      width: 100%; /* Garantir que o conteúdo ocupe toda a largura */
+      padding-left: 0;
+  }
+}
+
+/* Ajustes para telas muito pequenas, como celulares (max-width 480px) */
+@media (max-width: 480px) {
+  /* Reduzir ainda mais o tamanho do botão */
+  .btn-ver-mais {
+      padding: 10px 18px; /* Ajuste no padding */
+      font-size: 13px; /* Menor fonte */
+  }
+
+  /* Ajuste na altura e largura do botão */
+  .btn {
+      width: 180px; /* Largura reduzida */
+      height: 50px; /* Menor altura */
+  }
+
+  .btn span {
+      font-size: 18px; /* Fonte menor */
+  }
+
+  .pini {
+      font-size: 1.1em; /* Menor fonte em telas pequenas */
+  }
+}

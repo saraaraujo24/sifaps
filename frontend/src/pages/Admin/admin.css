@@ -1,0 +1,133 @@
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    transition: opacity 0.5s ease-in-out;
+}
+th, td {
+    border: 1px solid #ddd;
+    text-align: left;
+    font-size: 0.8em;
+    padding: 8px;
+}
+th {
+    background-color: #255868;
+    color: white;
+}
+.btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+}
+.approve {
+    background-color: #28a745;
+    color: white;
+}
+.reject {
+    background-color: #dc3545;
+    color: white;
+}
+
+.section-admin{
+    height: 600px; /* Altura máxima */
+    width: 100%;
+    margin: 0 auto;
+    overflow-y: auto; /* Permite rolagem vertical, se o conteúdo exceder a altura máxima */
+}
+
+div {
+    transition: opacity 0.5s ease-in-out;
+}
+div[style="display: none;"] {
+    opacity: 0;
+}
+
+.div-admin {
+    margin-top: -1%;
+}
+
+/* Estilos para o botão */
+.block-btn {
+    border: 1px solid  #ff0000;
+    background-color: white;  /* Cor de fundo */
+    color:  #ff0000;               /* Cor do texto */
+    padding: 5px 10px;         /* Padding (espaçamento interno) */
+    border-radius: 5px;         /* Bordas arredondadas */
+    cursor: pointer;           /* Cursor de mãozinha ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Estilo quando o botão é clicado (estado ativo) */
+.block-btn:active {
+    background-color: #cc0000;  /* Cor de fundo ao clicar */
+}
+
+/* Estilo ao passar o mouse sobre o botão */
+.block-btn:hover {
+    background-color: #ff4d4d;  /* Cor de fundo ao passar o mouse */
+    color: #ddd;
+}
+
+/* Estilos para o botão */
+.unlock-btn {
+    border: 1px solid  #28a745;
+    background-color: white;  /* Cor de fundo */
+    color:  #28a745;               /* Cor do texto */
+    padding: 5px 10px;         /* Padding (espaçamento interno) */
+    border-radius: 5px;         /* Bordas arredondadas */
+    cursor: pointer;           /* Cursor de mãozinha ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Estilo quando o botão é clicado (estado ativo) */
+.unlock-btn:active {
+    background-color: #28a745;  /* Cor de fundo ao clicar */
+}
+
+/* Estilo ao passar o mouse sobre o botão */
+.unlock-btn:hover {
+    color: #ddd;
+    background-color: #28a745;  /* Cor de fundo ao passar o mouse */
+}
+
+.rejeitar-prof{
+    border: 1px solid  #ff0000;
+    background-color: white;  /* Cor de fundo */
+    color:  #ff0000;               /* Cor do texto */
+    padding: 5px 10px;         /* Padding (espaçamento interno) */
+    border-radius: 5px;         /* Bordas arredondadas */
+    cursor: pointer;           /* Cursor de mãozinha ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+/* Estilo quando o botão é clicado (estado ativo) */
+.rejeitar-prof:active {
+    background-color: #cc0000;  /* Cor de fundo ao clicar */
+}
+
+/* Estilo ao passar o mouse sobre o botão */
+.rejeitar-prof:hover {
+    background-color: #ff4d4d;  /* Cor de fundo ao passar o mouse */
+    color: #ddd;
+}
+
+.aprovar-prof{
+    border: 1px solid  #28a745;
+    background-color: white;  /* Cor de fundo */
+    color:  #28a745;               /* Cor do texto */
+    padding: 5px 10px;         /* Padding (espaçamento interno) */
+    border-radius: 5px;         /* Bordas arredondadas */
+    cursor: pointer;           /* Cursor de mãozinha ao passar o mouse */
+    transition: background-color 0.3s ease; /* Transição suave ao passar o mouse */
+}
+
+.aprovar-prof:active {
+    background-color: #0fdd3f;
+}
+
+.filterSelect-label {
+    margin-left: 4%;
+    color: #21879D;
+}

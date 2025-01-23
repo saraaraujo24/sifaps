@@ -1,0 +1,125 @@
+h1, h2 {
+    color: #333;
+}
+form {
+    margin-bottom: 20px;
+}
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+button {
+    background-color: #21879D;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+
+.respostas {
+    margin-left: 20px;
+    border-left: 2px solid #5cb85c;
+    padding-left: 10px;
+}
+    
+.btn-ver-respostas {
+   color: #21879D; /* Cor do texto */
+    cursor: pointer; /* Muda o cursor para pointer */
+    font-size: 14px; /* Tamanho da fonte */
+   
+
+}
+.btn-ver-respostas:hover {
+    color: #426269; /* Cor de fundo ao passar o mouse */
+}
+
+.btn-responder {
+  color: #426269;
+}
+
+.nome_usuario {
+    color: #aa9f9f;
+    font-weight: lighter; 
+    font-size: 15px;/* Define a fonte como mais fina */
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/* Estilo do elemento pai */
+.containerComentariopai {
+    display: flex;
+    justify-content: center; /* Alinha horizontalmente */
+    align-items: center;     /* Alinha verticalmente */
+    margin-top: -3%;
+}
+
+/* Estilo do container */
+.containerComentario {
+    width: 50%;
+}
+
+.section_main-imgC {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */ 
+
+}
+
+.main-imgC {
+    display: flex;           /* Ativa o Flexbox */
+    justify-content: center; /* Centraliza a imagem horizontalmente */
+    align-items: center;     /* Centraliza a imagem verticalmente */
+}
+
+.main-imgC img {
+    width: 60%; /* Escala proporcionalmente */
+    height: auto;       /* Remove o espaço extra abaixo da imagem */
+    object-fit: cover;
+}
+
+.tituloComentario {
+    font-size: 1.8rem; /* Tamanho base da fonte */
+}
+
+@media (max-width: 1200px) {
+    .tituloComentario {
+        font-size: 2.5rem; /* Fonte menor em telas médias */
+    }
+}
+
+@media (max-width: 768px) {
+    .tituloComentario {
+        font-size: 1.5rem; /* Fonte ainda menor em telas pequenas */
+    }
+}
+
+@media (max-width: 480px) {
+    .tituloComentario {
+        font-size: 1.0rem; /* Fonte bem pequena em telas muito pequenas */
+    }
+}
+
+.btn-excluir {
+    background-color:#fff;
+    color: red;
+    border: 2px solid red;
+    padding: 2px 2px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-size: 0.6rem;
+}
+
+
+.btn-excluir:hover {
+   background-color:#dd1b1b;
+   color: #fff;
+}
+
+.comentario {
+
+    color: black;
+}

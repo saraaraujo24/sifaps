@@ -1,0 +1,79 @@
+    
+    .container-principal-meu-projeto {
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+    }
+    
+    .container-meu-projeto{
+        background: white;
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        max-width: 600px;
+    }
+
+        .container-visualizar {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-groupp {
+            flex: 1 1 48%; /* Ocupa aproximadamente 50% do espaço disponível */
+            max-width: 48%; /* Limita a largura a 48%, considerando o gap */
+            box-sizing: border-box; /* Inclui o padding e borda no cálculo da largura */
+          }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #21879D;
+        }
+
+        input[type="text"], input[type="file"], textarea {
+            
+            width: 100%;
+            padding: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            box-sizing: border-box;
+        }
+
+        textarea {
+            resize: vertical;
+            height: 150px;
+        }
+
+        .submit-btn {
+            background-color: #21879D;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 4px;
+        }
+
+        .submit-btn:hover {
+            background-color: #13505e;
+        }
+
+        .formCadas-row-perfil {
+            display: flex;
+            flex-wrap: wrap; /* Permite quebrar para a próxima linha */
+            gap: 20px; /* Espaçamento entre os itens */
+            margin-top: 10px;
+        }

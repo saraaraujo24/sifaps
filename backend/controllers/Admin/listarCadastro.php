@@ -12,8 +12,8 @@ if (!$PDO) {
 }
 
 // Alterar a consulta para buscar apenas cadastros pendentes
-$sql = "SELECT idProfissional, nome, email, celular, cpf, cidade, estado, crp_crm, profissao,data_cadastro 
-        FROM cadastroProf WHERE status = 'pendente'";
+$sql = "SELECT id, nome, email, celular, cpf, cidade, estado, crp_crm, profissao,data_cadastro 
+        FROM usuarios WHERE status = 'pendente'";
 $result = $PDO->query($sql);
 
 if ($result) {
@@ -25,40 +25,5 @@ if ($result) {
 } else {
     echo json_encode(["status" => "error", "message" => "Erro ao buscar dados."]);
 }
-?>
-<?php
-/*include("../../api/conn.php");
-
-header('Content-Type: application/json');
-
-$PDO = db_connect();
-if (!$PDO) {
-    echo json_encode(["status" => "error", "message" => "Erro na conexão com o banco de dados."]);
-    exit;
-}
-
-// Consulta para buscar cadastros com status 'aprovado' e 'rejeitado'
-$sql = "SELECT idProfissional, nome, email, celular, cpf, cidade, estado, crp_crm, profissao, status 
-        FROM cadastroProf WHERE status IN ('aprovado', 'rejeitado')";
-$result = $PDO->query($sql);
-
-if ($result) {
-    $usuarios = [
-        'aprovados' => [],
-        'rejeitados' => []
-    ];
-    
-    while ($row = $result->fetch(PDO::FETCH_ASSOC)) {
-        if ($row['status'] === 'aprovado') {
-            $usuarios['aprovados'][] = $row;
-        } elseif ($row['status'] === 'rejeitado') {
-            $usuarios['rejeitados'][] = $row;
-        }
-    }
-    
-    echo json_encode(["status" => "success", "data" => $usuarios]);
-} else {
-    echo json_encode(["status" => "error", "message" => "Erro ao buscar dados."]);
-}*/
 ?>
 

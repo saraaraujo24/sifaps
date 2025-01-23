@@ -1,0 +1,76 @@
+
+.container-visualizar {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os cards que não cabem na linha sejam movidos para a próxima linha */
+    gap: 20px; /* Espaçamento entre os cards */
+    justify-content: center; /* Alinha os cards à esquerda */
+}
+.profissional-card {
+    width: 400px; /* Define a largura dos cards */
+    border: 1px solid #ccc; /* Adiciona uma borda ao card */
+    padding: 15px; /* Adiciona padding ao redor do conteúdo */
+    border-radius: 8px; /* Borda arredondada */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    background-color: #fff; /* Cor de fundo do card */
+    text-align: center; /* Alinha o conteúdo no centro */
+    height: auto;
+    overflow: hidden;
+}
+
+.profissional-card img {
+    width: 60%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.profissional-card h2 {
+    font-size: 1.0em;
+    margin-top: 10px;
+}
+
+.profissional-card p {
+    font-size: 0.9em;
+    text-align: justify;
+
+}
+
+.profissional-card .descricao {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.profissional-card .crp-crm {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.profissional-card:hover {
+    transform: translateY(-5px);
+}
+
+@media (max-width: 1200px) {
+    .profissional-card {
+        width: 45%;  /* Reduz a largura dos cartões para 45% em telas grandes */
+    }
+}
+
+@media (max-width: 768px) {
+    .profissional-card {
+        width: 45%;  /* Reduz a largura dos cartões para 45% em telas médias */
+    }
+}
+
+@media (max-width: 480px) {
+    .profissional-card {
+        width: 100%;  /* Torna os cartões com largura total em telas pequenas */
+    }
+
+    h1 {
+        font-size: 1.8em;
+        text-align: center;
+    }
+}
+

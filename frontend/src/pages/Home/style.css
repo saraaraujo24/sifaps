@@ -1,17 +1,38 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
+ 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+   
     text-decoration: none;
     list-style: none;
 }
-
+ 
+ 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
 }
-
+ 
+.container h1 {
+    color: white;
+ 
+}
+ 
+h1 {
+    color: #21879D;
+    text-align: center;
+    margin: 30px;
+}
+ 
+h3 {
+    text-align: center;
+    color: white;
+}
+ 
+p {
+    line-height: 1.5;
+}
 :root{
     --verde-escuro: #21879D;
     --verde: #2f9364;
@@ -20,22 +41,26 @@ body {
     --color-p: #a1a1a1;
     --color-p-2: #868585;
 }
-
+ 
 .background-verde {
     background: var(--verde-escuro);
 }
-
+ 
+.background-verde1 {
+    background: rgb(204, 201, 201);
+}
+ 
 .container {
     max-width: 1440px;
-    padding: 0 5%;
+
     margin: 0 auto;
 }
-
+ 
 section,
 footer{
-    padding: 2.7rem 0;
+    padding: 2.0rem 0;
 }
-
+ 
 .btn-gradient {
     padding: 10px 25px;
     color: white;
@@ -43,188 +68,314 @@ footer{
     cursor: pointer;
     background-image: var(--degrade-bnt);
 }
-
+ 
 nav {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding: 20px 0
+    padding: 2px 0;
+    background-color: white;
+}
+ 
+iframe {
+    display: block;
+    margin: 25px;
+  }
+ 
+  .video-container {
+    display: flex;
+}
+ 
+.video-container1 {
+    display: flex;
+}
+ 
+#box {
+    width: 100%;
+    height: 30px;
+    background-color: #255868;
+ 
+  }
+ 
+ /* Estilos gerais */
+.logo {
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: row; /* Alinha os itens lado a lado (imagem e textos) */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    padding: 20px;
+    justify-content: center;
 }
 
-.logo a{
-    font-size: 30px;
+.logo img {
+    max-width: 100px; /* Ajuste o tamanho máximo da imagem */
+    height: auto; /* Mantém a proporção */
+}
+
+.text-container {
+    display: flex; /* Ativa Flexbox para o texto */
+    flex-direction: column; /* Organiza o <a> e <p> em coluna */
+    text-align: left; /* Alinha o texto à esquerda */
+}
+
+.text-container a {
+    font-size: 2.0rem;
     font-weight: bold;
-    color: white;
+    margin: 0;
+    text-decoration: none;
+    color: #fff;
+    float: left;
+    text-align: center;
 }
 
-.logo p{
-    font-size: 14px;
-    color: white;
+.text-container p {
+    font-size: 1.3rem;
+    color: #fff;
+    margin: 5px 0 0; /* Espaçamento entre o <a> e o <p> */
 }
 
+@media (max-width: 768px) {
+    .logo p {
+        font-size: 18px;
+    }
+}
+ 
 .ul {
     display: flex;
-    align-items: center;
+    align-items: center;    
+    justify-content: center;
 }
-
+ 
 .ul li{
     margin: 0 35px;
     font-size: 15px;
 }
-
+ 
 .ul li a{
-    color: white;
+    color: #255868;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 18px;
 }
-
+ 
+.ul li a img{
+   
+    height: 50px;
+    margin: 5px;
+}
+ 
+ 
+ 
 main .container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin-top: 30px;
+    justify-content: center;
+    gap: 20px;
 }
-
+ 
 .main-text {
-    width: 50%;
+    width: 40%;
     color: white;
 }
-
+ 
 .main-text h1 {
     font-size: 4.5rem;
 }
-
+ 
 .main-text div{
     display: flex;
     align-items: center;
     margin-top: 20px;
 }
-
+ 
 .main-img{
     width: 40%;
 }
-
+ 
 .main-img img {
     width: 100%;
-  
+ 
 }
-
-
+ 
+.main-img1{
+    width: 1300px;
+    height: 210px;
+}
+ 
 .menu-icon{
     display: none;
     position: relative;
     z-index: 10;
 }
-
+ 
+ 
+.main-img1 img  {
+    width: 500px;
+    height: 210px;
+}
+ 
+.menu-icon img {
+    background-color: #255868;
+ 
+}
+ 
+.close-icon {
+    font-size: 50px; /* Tamanho do ícone de fechar */
+    color: white; /* Cor do ícone */
+    position: absolute; /* Para posicionar em relação ao menu */
+    top: 20px; /* Ajuste a posição */
+    right: 80px; /* Ajuste a posição */
+    cursor: pointer; /* Mão ao passar o mouse */
+    display: none; /* Esconder por padrão */
+    z-index: 20; /* Z-index alto para ficar acima de outros elementos */
+}
+ 
+.ul.ativo + .close-icon {
+    display: block; /* Mostra o ícone de fechar quando o menu está ativo */
+}
+ 
 .resultados{
     background: #255868;
 }
-
+ 
 .resultados .container{
     display: flex;
     align-items: center;
-    justify-content: space-between;
 }
-
+ 
 .resultados .resultados-text{
     color: white;
     font-size: 1.6rem;
     font-weight: 600;
-    width: 50%;
+    width: 100%;
+    justify-content: center
 }
-
+ 
 .resultados .resultados-numero{
     display: flex;
     align-items: center;
     justify-content: center;
     color: white;
 }
-
+ 
 .resultados .resultados-numero p{
     text-align: center;
     margin: 0 30px;
     font-size: 20px;
 }
-
+ 
 .resultados .resultados-numero p span{
     font-size: 30px;
     font-weight: 600;
 }
-
+ 
 .diferencias .container{
     display: flex;
     justify-content: space-between;
     margin: 30px auto;
 }
-
+ 
+/* Card Profissionais */
 .diferencias .card{
     width: 30%;
     cursor: pointer;
     padding: 20px;
     border-radius: 15px;
     transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    position: relative;
 }
-
+ 
+ 
 .diferencias .card:hover{
-    box-shadow: 0px 10px 67px 8px #000;
+    box-shadow: 0px 10px 67px 8px #21879D;
 }
-
+ 
+.diferencias .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    border: 20px solid transparent;
+    border-top: 20px solid #21879D;
+    border-right: 20px solid #21879D;
+}
+ 
 .diferencias .card img{
     width: 60px;
+   
 }
-
+ 
 .diferencias .card .titulo{
     margin: 13px 0;
     font-weight: 600;
+    color: #21879D;
 }
 
+.link-sublinhado{
+    text-decoration: none;
+    color: white;
+}
+ 
+.botao li a {
+    color: white;
+}
 .casa .container{
     display: flex;
     align-items: center;
+    padding: 0 100px;
 }
-
+ 
 .casa .casa-img{
     width: 50%;
 }
-
+ 
 .casa .casa-img img{
-    width: 100%;
+    width: 80%;
     border-radius: 10px;
 }
-
+ 
 .casa .casa-text{
     width: 50%;
-    padding-left: 90px;
+    color: #13505e;
 }
-
+ 
 .casa .casa-text h2{
     font-size: 2.5em;
 }
-
+ 
 .casa .casa-text p{
     max-width: 20px 0;
-    color: var(--color-p);
+    color: #13505e;
 }
-
+ 
 .casa .casa-text p b{
     color: black;
     font-size: 25px;
 }
-
+ 
+/* Livros Recomendados */
+ 
 .melhores-lugares .azul{
     font-size: 24px;
     font-weight: 600;
     color: #0060f0;
+ 
 }
-
+ 
 .melhores-lugares h2{
     font-size: 2.5rem;
+    margin-left: 55px;
 }
-
+ 
 .melhores-lugares .cards{
     display: flex;
     justify-content: space-between;
     margin-top: 50px;
 }
-
+ 
 .melhores-lugares .cards .card-item{
     width: 30%;
     text-align: center;
@@ -232,116 +383,152 @@ main .container{
     border-radius: 20px;
     box-shadow: 0px 35px 97px -15px rgba(0, 0, 0, 0, 0.08);
 }
-
+ 
 .melhores-lugares .cards img{
     width: 80px;
 }
-
+ 
 .melhores-lugares .cards .local-casa {
     margin: 5px 0;
     color: var(--color-p);
 }
-
+ 
 .melhores-lugares .cards .nome-casa{
     font-size: 30px;
     font-weight: 500;
 }
-
+ 
 .melhores-lugares .cards .contato{
     margin-bottom: 20px;
     color: var(--color-p-2);
 }
-
+ 
 .melhores-lugares .cards button{
     padding: 10px 20px;
     color: white;
-    background-color: var(--orange);
+    background-color: #21879D;
     border: none;
 }
+ 
+ 
+.melhores-lugares .cards button{
+    padding: 10px 20px;
+    color: white;
+    background-color: #21879D;
+    border: none;
+    border-radius: 8px;
+}
+ 
+.melhores-lugares .cards button:hover {
+    background-color: #0060f0;
+    color: #21879D;
+    transition: all 0.2s ease-in-out;
+}
+       
+  /* Fim */
+ 
+ 
+/* Fotos */
 
+ 
 .newsletter{
     margin-top: 50px;
-    background-color: var(--verde);
+    background-color: #255868;
 }
 
 .newsletter .box-newsletter{
-    text-align: center;
-    padding: 100px;
-    background-image: url('../img/background-newsletter.png');
-    background-repeat: no-repeat;
-    background-repeat: cover;
-    background-position: center;
-    border-radius: 15px;
+    padding: 0px;
+    border-radius: 50%;
 }
-
+ 
+.image-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 1px;
+}
+ 
+.image-item {
+    text-align: center; /* Centraliza o texto abaixo da imagem */
+    object-fit: cover; 
+}
+ 
+.newsletter .box-newsletter img {
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 100px;
+    height: 100px;  
+}
+ 
 .newsletter .box-newsletter h2{
     font-size: 2.5rem;
-}
-
-.newsletter .box-newsletter p{
-    margin: 13px 0;
-}
-
-.newsletter .box-newsletter input{
-    width: 35%;
-    padding: 15px;
-    border-radius: 15px;
-    border: none;
-    outline: none;
-    color: #00000098;
-    background-color: #faefda;
-}
-
-.newsletter .box-newsletter button{
-    font-size: 15px;
-    border: none;
-    outline: none;
-    padding: 15px;
-    border-radius: 14px;
     color: white;
-    background-color: var(--verde);
-    cursor: pointer;
+ 
 }
+ 
+.newsletter .box-newsletter p{
+    text-align: center;
+    color: white;
+}
+ 
 
+/* Fim */
+ 
 footer{
-    background-color: var(--verde-escuro);
+    background-color: #21879D; /* Cor de fundo do rodapé */
+    color: #fff; /* Cor do texto */
+    padding: 70px;
+    text-align: center;
 }
-
+ 
 footer .container{
     display: flex;
     color: white;
 }
-
+ 
 footer .container ul{
-    width: 25%; 
+    width: 25%;
 }
-
+ 
 footer .container h3{
     margin-bottom: 16px;
     font-weight: 600;
 }
-
+ 
 footer .container .redes-sociais img{
     margin-right: 10px;
+    width: 25px;
+    right: 25px;
 }
-
+ 
 footer .container ul > p{
     margin-bottom: 40px;
 }
-
+ 
 footer .container li{
     margin: 10px 0;
 }
-
+ 
 footer .container a{
     color: white;
 }
-
+ 
+.container.redes-sociais{
+    width: 40px;
+    right: 40px;
+}
+ 
+.redes-sociais li p img {
+    width: 17px;
+    right: 17px;
+}
 @media (max-width: 960px) {
+
     .menu-icon{
         display: block;
+        
     }
-
+ 
     .ul{
         position: fixed;
         background: var(--verde-escuro);
@@ -352,98 +539,118 @@ footer .container a{
         transition: 0.3s;
         flex-direction: column;
         justify-content: center;
+        gap: 8%;
     }
-
+ 
     .ul li{
-        font-size: 20px;
+        font-size: 25px;
         margin: 20px 0;
+  
     }
     .ul.ativo{
         left: 0;
     }
-
+ 
     main .container{
         flex-direction: column;
     }
-
+ 
     main .container .main-img,
     main .container .main-text{
         width: 100%;
         text-align: center;
     }
-
+ 
     main .container .main-text h1{
         font-size: 4rem;
     }
-
+ 
     main .container .main-text div{
         justify-content: center;
     }
-
+ 
     .resultados .container{
         flex-direction: column;
     }
-
+ 
     .resultados .resultados-text,
     .resultados .resultados-numero{
         width: 100%;
         text-align: center;
     }
-
+ 
     .resultados-numero{
         margin-top: 30px;
 }
-
-    .diferencias .container{
-        flex-direction: column;
+ 
+.diferencias .container {
+    display: flex;                /* Define o contêiner como flexbox */
+    flex-direction: row;          /* Organiza os cards na horizontal */
+    justify-content: center;      /* Centraliza os cards horizontalmente */
+    align-items: center;          /* Centraliza os cards verticalmente */
+                /* Faz o contêiner ocupar toda a altura da tela (opcional, se precisar centralizar verticalmente na tela inteira) */
+    flex-wrap: wrap;              /* Permite que os cards se ajustem em várias linhas, caso o tamanho da tela seja pequeno */
 }
 
-    .diferencias .card{
-        width: 100%;
-    }
-
+ 
+.diferencias .card {
+    width: 300px;                 /* Define uma largura fixa para o card (pode ajustar o valor conforme necessário) */
+    cursor: pointer;
+    padding: 20px;
+    border-radius: 15px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+    position: relative;
+    margin: 10px;                 /* Espaço entre os cards */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adiciona uma leve sombra aos cards */
+}
+    
     .casa .container{
         flex-direction: column-reverse;
     }
-
+ 
     .casa .casa-text,
     .casa .casa-img{
         width: 100%;
         text-align: center;
         padding: 0;
     }
-
+ 
     .melhores-lugares .cards{
         flex-direction: column;
     }
-
+ 
     .melhores-lugares .cards .card-item{
         width: 100%;
         margin-top: 50px;
     }
-
-
+ 
+ 
     .newsletter .box-newsletter{
         padding: 50px;
     }
-
+ 
     .newsletter .box-newsletter h2{
         font-size: 2rem;
     }
-
+ 
     .newsletter .box-newsletter input{
          width: 90%;
     }
-
+ 
     .newsletter .box-newsletter button{
        width: 50%;
         margin-top: 20px;
     }
-
+ 
     footer .container{
         flex-direction: column
     }
-    
+   
     footer .container ul{
         width: 100%;
         margin-bottom: 30px;
@@ -453,8 +660,182 @@ footer .container a{
     .resultados .resultados-numero{
         flex-direction: column;
     }
-
+ 
     main .container .main-text h1{
         font-size: 3rem;
     }
+
+    .casa .container{
+        flex-direction: column-reverse;
+    }
+}
+ 
+.livros-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que os livros se movam para a próxima linha se não houver espaço */
+    justify-content: space-between; /* Espaço entre os livros */
+    padding: 20px;
+}
+ 
+.livro {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 15px;
+    width: calc(25% - 20px); /* 25% da largura do container menos as margens */
+    box-sizing: border-box; /* Inclui padding e border na largura total */
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.2s; /* Animação suave ao passar o mouse */
+}
+ 
+.livro:hover {
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+ 
+.livro img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do container */
+    height: 200px; /* Define uma altura fixa */
+    object-fit: contain; /* Ajusta a imagem para caber no espaço sem cortar */
+    border-radius: 5px;
+}
+ 
+
+.modal-trigger a  {
+    color: #f9f9f9;
+}
+ 
+/* Botão whatsapp */
+ 
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000; /* Para garantir que o botão fique acima de outros elementos */
+}
+ 
+.whatsapp-button img {
+    width: 70px;
+    height: 70px;
+}
+ 
+ 
+@media (max-width: 600px) {
+    .whatsapp-button {
+        width: 50px;
+        height: 50px;
+    }
+    .whatsapp-button img {
+        width: 25px;
+        height: 25px;
+    }
+}
+ 
+/*  */
+ 
+ 
+/* Responsividade */
+@media (max-width: 1200px) {
+    .livro {
+        width: calc(33.33% - 20px); /* 3 livros por linha */
+    }
+}
+ 
+@media (max-width: 900px) {
+    .livro {
+        width: calc(50% - 20px); /* 2 livros por linha */
+    }
+}
+ 
+@media (max-width: 600px) {
+    .livro {
+        width: 100%; /* 1 livro por linha */
+    }
+}
+ 
+@media (max-width: 1000px) {
+    .casa .casa-text,
+    .casa .casa-img{
+        width: 90%;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    main .container .main-text h1 {
+        font-size: 2.5rem;
+        text-align: center;
+    }
+
+    .sug {
+        color: #13505e;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+
+    .logo {
+        display: flex; /* Ativa o Flexbox */
+        flex-direction: column; /* Organiza os itens em coluna */
+        align-items: center; /* Centraliza os itens horizontalmente */
+        text-align: center; /* Alinha o texto ao centro */
+        padding: 20px;
+    }
+
+}
+
+/*Sara Acresentou usando nas paginas comentario ,login*/
+
+.faixa-horizontal {
+    height: 10px; /* Espessura da faixa */
+    width: 100%; /* Largura da faixa, 100% da largura do contêiner */
+    background: #21879D;
+    position: relative; /* Alinhamento relativo ao contêiner pai */ 
+}
+
+/* Sara acresentou */
+@media (max-width: 1200px) {
+
+    .ul li{
+        margin: 0 30px;
+        font-size: 15px;
+    }
+
+}
+
+
+
+@media (max-width: 990px) {
+    .menu {
+        display: block;
+        position: absolute;
+        z-index: 100;
+        width: 100%;
+        height: 100%;
+    }
+
+     /* Estilos gerais */
+.logo {
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: row; /* Alinha os itens lado a lado (imagem e textos) */
+    align-items: center; /* Centraliza os itens verticalmente */
+    gap: 20px; /* Espaçamento entre a imagem e o texto */
+    padding: 20px;
+    justify-content: center;
+    margin-top: 10%;
+}
+
+
+}
+
+.sug {
+    color: #13505e;
+    text-align: center;
 }

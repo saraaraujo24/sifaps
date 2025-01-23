@@ -1,0 +1,162 @@
+.container-como-se-cuidar {
+    background-color:#095869;;
+
+}
+
+.container5 {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 120px;
+    max-width: 1200px;
+    margin: auto;
+    line-height: 1.6;
+    color: #333;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+
+}
+
+h1 {
+    text-align: center;
+    width: 100%; /* Para garantir que ocupe toda a largura do contêiner */
+    margin: 0; /* Remove margem padrão */
+    font-size: 40px;
+}
+
+h3 {
+     margin-top: 10px; /* Espaço entre h1 e h3 */
+}
+
+.box {
+    position: relative;
+    border-radius: 10px;
+    padding: 10px;
+    width: 30%;
+    height: 450px; /* Altura fixa */
+    margin: 10px 8px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    justify-content: flex-start; /* Muda o alinhamento para o topo */
+    border: 1px solid #21879D; 
+    text-align: justify; /* Alinha o texto de forma justificada */
+    line-height: 1.5;
+}
+
+.box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 1.5; /* Opacidade padrão */
+    z-index: 0;
+    transition: opacity 0.2s; /* Transição suave */
+}
+
+.box h2 {
+    margin-top: 5%;
+    position: relative;
+    z-index: 1;
+    color: rgba(9, 75, 60, 0.856); /* Cor interna do texto */
+    text-shadow: 
+    -1px -1px 0px rgb(231, 231, 231),  /* Sombreado à esquerda e acima */
+    1px -1px 0px rgb(243, 243, 243),   /* Sombreado à direita e acima */
+    -1px 1px 0px rgb(255, 255, 255),   /* Sombreado à esquerda e abaixo */
+    1px 1px 0px rgb(228, 228, 228);    /* Sombreado à direita e abaixo */
+}
+
+
+.box:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px #21879D;
+}
+
+.box-content {
+    display: none; /* Esconder o conteúdo por padrão */
+    margin-top: 10px;
+    position: relative;
+    z-index: 1;
+    padding: 15px;
+}
+
+
+
+.box.active::before {
+    opacity: 0; /* Esconde a imagem ao ativar a box */
+}
+
+.active .box-content {
+    display: block; /* Mostrar o conteúdo ao clicar */
+}
+.pimg {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100px; /* Ajuste o tamanho conforme necessário */
+    border-radius: 50%; /* Torna a imagem redonda */
+    object-fit: cover; /* Garante que a imagem preencha o círculo sem distorcer */
+    
+    display: block; /* Faz a imagem se comportar como bloco */
+    margin-left: auto; /* Centraliza a imagem à esquerda automaticamente */
+    margin-right: auto; /* Centraliza a imagem à direita automaticamente */
+  }
+  
+  
+/* Media Queries para Responsividade */
+
+/* Em telas de até 1024px (tablets), as caixas de conteúdo passam a ter 45% da largura */
+@media (max-width: 1024px) {
+    .box {
+        width: 45%;
+    }
+
+}
+
+/* Em telas de até 768px (smartphones e tablets pequenos), as caixas passam a ter 100% da largura */
+@media (max-width: 768px) {
+    .box {
+        width: 100%;
+    }
+
+    h1 {
+        font-size: 24px; /* Reduz o tamanho da fonte do título principal */
+    }
+
+    h3 {
+        font-size: 18px; /* Reduz o tamanho da fonte do subtítulo */
+    }
+
+}
+
+/* Em telas de até 480px (smartphones pequenos), ajusta ainda mais os estilos */
+@media (max-width: 480px) {
+    .container55 {
+        padding: 10px; /* Diminui o padding do container */
+    }
+
+
+    h1 {
+        font-size: 20px; /* Tamanho do título ajustado para telas muito pequenas */
+    }
+
+    h3 {
+        font-size: 16px; /* Ajuste do tamanho do subtítulo */
+    }
+}
+
+@media (max-width: 980px) {
+    .container-como-se-cuidar {
+        background-color: #21869d9a;
+        margin-top: 10%;
+    }
+}

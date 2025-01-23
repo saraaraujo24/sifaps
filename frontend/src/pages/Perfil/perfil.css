@@ -1,48 +1,31 @@
-form {
-    background: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 40px;
-    margin-bottom: 20px;
-    width: 80%;
-  
+.section-perfil{
+    margin-top: 1%;
 }
 
-/* Estilos para o contêiner do formulário */
-.formformPerfil-container {
+.welcome-text-perfil {
+    font-size: 1.3rem; /* Tamanho grande para destacar a frase */
+    font-weight: 300; /* Peso de fonte mais forte para dar destaque */
+    color:#21879D; /* Cor escura, sóbria e profissional */
+    text-align: center; /* Centraliza o texto */
+    letter-spacing: 1px; /* Aumenta o espaçamento entre as letras */
+    margin-top: 20px; /* Espaço acima do texto */
+    margin-left: 2%;
+  }
+
+.img-perfil {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 10vh; /* Faz o contêiner ocupar a altura total da viewport */
-    padding: 20px; /* Adiciona um pouco de espaçamento ao redor */
+    overflow: hidden;   
 }
 
-/* Estilos para agrupar campos lado a lado */
-.formformPerfil-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    margin-bottom: 15px;
+@media (max-width: 950px) {
+    .section-perfil{
+        margin-top: 10%;
+    }
+    
 }
 
-.formformPerfil-group{
-    flex: 1;
-    min-width: calc(20% - 20px); /* Ajuste a largura conforme necessário */
-    margin-bottom: 0; /* Remove o margin-bottom padrão para itens lado a lado */
-}
-
-.formformPerfillabel {
-    display: block;
-    font-weight:normal;
-    margin-bottom: 5px;
-    color:#21879D;
-}
-
-
-
-.formPerfil input {
-    width: 80%;
-    padding: 10px;
-    border: 1px solid #21879D;
-    border-radius: 5px;
+.nav-perfil{
+    padding: 15px 0;
 }

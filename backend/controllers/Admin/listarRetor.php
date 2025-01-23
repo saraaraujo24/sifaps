@@ -10,8 +10,11 @@ if (!$PDO) {
 }
 
 // Consulta para buscar cadastros com status 'aprovado' e 'rejeitado'
-$sql = "SELECT idProfissional, nome, email, celular, cpf, cidade, estado, crp_crm, profissao, status 
-        FROM cadastroProf WHERE status IN ('aprovado', 'rejeitado')";
+$sql = "SELECT id, nome, email, celular, cpf, cidade, estado, crp_crm, profissao, status 
+        FROM usuarios 
+        WHERE status IN ('aprovado', 'rejeitado') 
+        AND crp_crm IS NOT NULL AND crp_crm <> '' 
+        AND profissao IS NOT NULL AND profissao <> ''";
 $result = $PDO->query($sql);
 
 if ($result) {

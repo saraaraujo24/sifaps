@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Home/style.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Cadastro Profissional</title>
+    
+</head>
+<style>
+    .nav-perfil{
+        padding: 18px 0;
+    }
+</style>
+<body>
+    <div id="box">
+        <p id="output"></p>
+    </div>
+    <div >
+        <header>
+            <div class="menu">
+                <nav class="nav-perfil">
+                        <ul class="ul" id="menu-list">
+                            <li><a href="../Home/index.html">Página inicial</a></li>
+                            <li><a href="../Perfil/perfil.html">Home</a></li>
+                            <li><a href="../CriarPublicações/index.php">Criar Publicações</a></li>
+                            <li><a href="../meu_projeto/index.html">Criar Perfil</a></li>
+                            <li><a href="../Seus-Dados/seus-dados.html">Seus Dados</a></li>
+                        </ul>              
+                    <div class="menu-icon">
+                        <img src="../../img/menu.png" alt="menu">
+                    </div>
+                </nav>
+            </div>
+        </header>
+        <div class="faixa-horizontal"></div>
+    </div>
+    <section class="container-principal-meu-projeto">
+        <div class="container-meu-projeto">
+        <h1>Perfil do Profissional</h1>
+        
+        <form id="professionalForm" action="processar_cadastro.php"  method="POST" enctype="multipart/form-data">
+            <div class="form-group">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div class="formCadas-row-perfil">  
+                <div class="form-groupp">
+                    <label for="profissao">Profissão:</label>
+                    <input type="text" id="profissao" name="profissao" required>
+                </div>
+                <div class="form-groupp">
+                    <label for="crp_crm">CRP/CRM:</label>
+                    <input type="text" id="crp_crm" name="crp_crm" required>
+                </div>
+            </div>
+        
+            <!---Acresentei-->
+            <div class="formCadas-row-perfil">
+                <div class="form-groupp">
+                    <label for="celular">Celular:</label>
+                    <input type="text" id="celular" name="celular" required>
+                </div>
+                
+                <div class="form-groupp">
+                    <label for="email">Email:</label>
+                    <input type="text" id="email" name="email" required>
+                </div>
+            </div>
+<br>
+            <div class="form-group">
+                <label for="descricao">Texto sobre sua área de atuação:</label>
+                <textarea id="descricao" name="descricao" required maxlength="500"></textarea>
+                <p id="charCount">500 caracteres restantes</p>
+            </div>
+
+
+            <div class="form-group">
+                <label for="foto">Foto:</label>
+                <input type="file" id="foto" name="foto" accept="image/*" required>
+            </div>
+
+            <div class="form-group">
+                <button type="submit" class="submit-btn">Cadastrar</button>
+            </div>
+        </form>
+        
+ 
+        
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+    <ul>
+        <h3 class="colorido">SIFAPS</h3><!-- REbeca 23/10/2024-->
+        <p>
+            Sifaps é uma forma de oferecer apoio e informação para familiares de pessoas com transtornos.<!-- REbeca 23/10/2024-->
+             Reconhecemos os desafios emocionais e práticos que essas famílias enfrentam e queremos ser uma fonte de recursos e orientação.
+             Acreditamos que, ao promover a compreensão e a empatia, podemos fortalecer o suporte a esses indivíduos. 
+            No Sifaps, buscamos criar um espaço seguro e acolhedor, onde todos possam encontrar amor, esperança e ferramentas para enfrentar essa jornada.</p>
+        <div class="redes-sociais">
+            <img src="../../img/facebook.png" alt="Facebook">
+            <img src="../../img/twitter.png" alt="X">
+            <img src="../../img/instagram.png" alt="Instagram">
+            <img src="../../img/linkedin.png" alt="Linkedin">
+        </div>
+    </ul>
+    <ul>
+        <h3>Links</h3>
+        <li><a href="#">Home</a></li><!-- REbeca 23/10/2024-->
+        <li><a href="#">Saúde Mental</a></li>
+        <li><a href="#">Publicações</a></li>
+        <li><a href="#">Videos</a></li>
+        <li><a href="#">Livros</a></li>
+    </ul>
+    <ul>
+        <h3>FAQ</h3>
+        <li><a href="#">Como funciona</a></li>
+        <li><a href="#">Caraccteristicas</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Sobre</a></li>
+        <li><a href="#">Comunicando</a></li>
+    </ul>
+    <ul>
+        <h3>Nos Contate</h3>
+        <li><p>(35)997317199</p></li>
+        <li><p>email@email.com</p></li>
+        <li><p>BRASIL</p></li>
+    </ul>
+
+</div>
+</footer>
+
+  <script src="../Home/main.js"></script>
+  <script>
+   // Corrigir o id para "professionalForm" no JS
+   document.getElementById("professionalForm").addEventListener("submit", function(event) {
+    event.preventDefault(); // Impede o envio padrão do formulário
+
+    var formData = new FormData(this); // Coleta os dados do formulário
+
+    console.log("Dados enviados:");
+    formData.forEach(function(value, key) {
+        console.log(key + ": " + value); // Exibe cada campo e o respectivo valor
+    });
+
+    fetch('processar_cadastro.php', {
+    method: 'POST',
+    body: formData
+    })
+    .then(response => response.json()) // Certifique-se de que a resposta será convertida para JSON
+    .then(data => {
+        console.log("Resposta do servidor:", data); // Verifique a resposta no console
+        if (data.status === 'sucesso') {
+            // Remover mensagens anteriores (se existirem)
+            const mensagensExistentes = document.querySelectorAll('.mensagem');
+            mensagensExistentes.forEach(msg => msg.remove());
+
+            // Exibe a mensagem de sucesso na página
+            const sucessoDiv = document.createElement('div');
+            sucessoDiv.textContent = data.mensagem;
+            sucessoDiv.classList.add('mensagem');
+            sucessoDiv.style.backgroundColor = '#d4edda'; // Verde claro
+            sucessoDiv.style.color = '#155724'; // Verde escuro
+            sucessoDiv.style.padding = '10px';
+            sucessoDiv.style.margin = '10px 0';
+            sucessoDiv.style.borderRadius = '5px';
+            sucessoDiv.style.textAlign = 'center';
+            document.querySelector('.container-meu-projeto').prepend(sucessoDiv);
+
+            // Limpa o formulário
+            alert('Cadastro realizado com sucesso');
+            document.getElementById("professionalForm").reset();
+        } else {
+            console.error("Erro no servidor:", data.mensagem); // Exibe o erro no console
+            alert(data.mensagem); // Exibe a mensagem de erro
+        }
+    })
+    .catch(error => {
+        console.error('Erro ao processar o cadastro:', error);
+        alert('Cadastro realizado com sucesso.');
+        window.location.reload()
+    });
+
+});
+
+
+
+    const textarea = document.getElementById('descricao');
+    const charCount = document.getElementById('charCount');
+    const maxLength = textarea.getAttribute('maxlength');
+    
+    textarea.addEventListener('input', function() {
+        const remaining = maxLength - this.value.length;
+        charCount.textContent = `${remaining} caracteres restantes`;
+    });
+
+</script>
+
+  
+    
+</body>
+</html>

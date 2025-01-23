@@ -1,0 +1,102 @@
+/* Importando uma fonte moderna do Google Fonts */
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px; /* Tamanho maior para o texto principal */
+}
+
+#formulario {
+    margin-bottom: 40px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 12px; /* Aumentando o padding para um toque mais moderno */
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color:  #21879D;
+    color: white;
+    padding: 12px; /* Aumentando o padding para um botão mais moderno */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background-color:  #21879D;
+}
+
+.publicacao {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    background: #f9f9f9;
+    transition: transform 0.3s, box-shadow 0.3s; /* Adicionando transição ao box-shadow */
+}
+
+.publicacao:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.publicacao-img {
+    display: flex;            /* Torna o contêiner flexível */
+    justify-content: center;  /* Centraliza horizontalmente */
+    align-items: center;
+}
+/* Define tamanhos padrão para imagens */
+.publicacao img {
+    width: 40%; /* Ajustado para ser responsivo */
+    height: auto; /* Mantém a proporção */
+}
+
+.publicacao h2 {
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.publicacao p {
+    margin-top: 5px;
+    font-size: 1.0rem;
+}
+
+@media (max-width: 600px) {
+    header {
+        font-size: 20px; /* Reduz o tamanho da fonte em telas pequenas */
+    }
+
+    main {
+        padding: 15px; /* Reduz o padding em telas pequenas */
+    }
+
+    button {
+        font-size: 14px; /* Ajusta o tamanho da fonte do botão */
+    }
+
+    .publicacao {
+        padding: 10px; /* Reduz o padding nas publicações */
+    }
+
+    .publicacao img,
+    .publicacao video, 
+    .publicacao iframe {
+        max-width: 100%; /* Certifica que não ultrapassem a largura do contêiner */
+    }
+}
+
+.h2-criarPubli{
+   color: #21879D; 
+   font-size: 1.2rem;
+}

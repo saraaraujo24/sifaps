@@ -1,0 +1,321 @@
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => Sara Maria
+    [email] => sara@gmail.com
+    [senha] => 123456
+    [celular] => (26) 56526-5665
+    [cpf] => 123.454.566-56
+    [estado] => Minas Gerais
+    [cidade] => ALPERCATA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-12 01:02:14
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => Sara Maria
+    [email] => sara@gmail.com
+    [senha] => 123456
+    [celular] => (26) 56526-5665
+    [cpf] => 123.454.566-56
+    [estado] => Minas Gerais
+    [cidade] => ALPERCATA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-12 01:13:01
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => Sara Maria
+    [email] => sara@gmail.com
+    [senha] => 123456
+    [celular] => (26) 56526-5665
+    [cpf] => 123.454.566-56
+    [estado] => Minas Gerais
+    [cidade] => ALPERCATA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-12 01:15:07
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => Sara Maria
+    [email] => sara@gmail.com
+    [senha] => 123456
+    [celular] => (26) 56526-5665
+    [cpf] => 123.454.566-56
+    [estado] => Minas Gerais
+    [cidade] => ALMENARA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-12 01:19:27
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => Sara Maria
+    [email] => sara@gmail.com
+    [senha] => 123456
+    [celular] => (26) 56526-5665
+    [cpf] => 123.454.566-56
+    [estado] => Minas Gerais
+    [cidade] => ALPERCATA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-12 01:22:24
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => Sara Maria
+    [email] => sara@gmail.com
+    [senha] => 123456
+    [celular] => (26) 56526-5665
+    [cpf] => 123.454.566-56
+    [estado] => Minas Gerais
+    [cidade] => ALPERCATA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-12 01:25:16
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => Sara Maria
+    [email] => sara@gmail.com
+    [senha] => 123456
+    [celular] => (26) 56526-5665
+    [cpf] => 123.454.566-56
+    [estado] => Minas Gerais
+    [cidade] => ALPERCATA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-12 01:27:41
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => Sara Maria
+    [email] => sara@gmail.com
+    [senha] => 123456
+    [celular] => (26) 56526-5665
+    [cpf] => 123.454.566-56
+    [estado] => Minas Gerais
+    [cidade] => ALPERCATA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-12 01:29:44
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 139.014.936-61
+    [estado] => Amazonas
+    [cidade] => CANUTAMA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:00:00
+)
+Array
+(
+    [nome] => Sara
+    [email] => sara@gmail.com
+    [senha] => 123456
+    [celular] => 997319686
+    [cpf] => 14220803661
+    [cidade] => sapucai-mirim
+    [estado] => Minas
+    [crp_crm] => 123456
+    [profissao] => psicologa
+    [tipo_usuario] => profissional
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 139.014.936-61
+    [estado] => Amazonas
+    [cidade] => CANUTAMA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:21:48
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 139.014.936-61
+    [estado] => Amazonas
+    [cidade] => CANUTAMA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:21:54
+)
+Array
+(
+    [tipo_usuario] => profissional
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 142.258.978-99
+    [estado] => MG
+    [cidade] => 
+    [crp_crm] => 326565
+    [profissao] => Psicologa
+    [data_cadastro] => 2024-10-15 02:24:47
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] =>  MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 142.258.978-99
+    [estado] => Minas Gerais
+    [cidade] => ALMENARA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:25:08
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => LARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 142.258.978-99
+    [estado] => Roraima
+    [cidade] => SAO LUIZ
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:26:25
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (98) 98989-89__
+    [cpf] => 142.258.978-99
+    [estado] => Roraima
+    [cidade] => SAO LUIZ
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:28:29
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 346.520.356-91
+    [estado] => Roraima
+    [cidade] => SAO LUIZ
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:32:35
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 142.258.978-99
+    [estado] => Roraima
+    [cidade] => UIRAMUTA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:39:28
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 346.520.356-91
+    [estado] => Amazonas
+    [cidade] => CAREIRO DA VARZEA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:40:03
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 142.258.978-99
+    [estado] => Minas Gerais
+    [cidade] => ALPERCATA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:44:26
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 139.014.936-61
+    [estado] => Roraima
+    [cidade] => UIRAMUTA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 02:50:48
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 139.014.936-61
+    [estado] => Minas Gerais
+    [cidade] => ALMENARA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 22:05:51
+)
+Array
+(
+    [tipo_usuario] => usuario
+    [nome] => SARA MARIA DE ARAUJO
+    [email] => saramariasm17.sm@gmail.com
+    [senha] => 123456
+    [celular] => (35) 99731-7199
+    [cpf] => 346.520.356-91
+    [estado] => Minas Gerais
+    [cidade] => ALPERCATA
+    [crp_crm] => 
+    [profissao] => 
+    [data_cadastro] => 2024-10-15 22:06:26
+)

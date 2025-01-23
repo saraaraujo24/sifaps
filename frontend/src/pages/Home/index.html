@@ -3,204 +3,336 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Daiane Carvalho</title>
+    <link rel="stylesheet" href="publicaçao.css"/>
+    <link rel="stylesheet" href="tex.css"/>
+    <link rel="stylesheet" href="../Home/style.css"/>
+    <link rel="stylesheet" href="../Home/dropdown.css"/>
+    <link rel="stylesheet" href="../Home/modal-area-restrita.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <title>ALÉM DO SOFRIMENTO INDIVIDUAL</title>
 </head>
+
+
 <body>
-    
-    <div class="background-verde">
+    <div id="box">
+        <p id="output"></p>
+    </div>
+      <div class="background-verde">
         <header>
-            <div class="container">
+            <div class="menu">
                 <nav>
-                    <div class="logo">
-                        <a href="index.html">SIFAPS</a>
-                        <P>Sistema familiar de Apoio a Saúde Mental</P>
-                    </div>
-                    <ul class="ul">
-                        <li><a href="#">Home</a></li>
-                        <li><a href="#">Saúde Mental</a></li>
-                        <li><a href="#">Publicações</a></li>
-                        <li><a href="#">Profissionais</a></li>
-                        <li><a href="../Login/index.html"><button class="btn-gradient">Login</button></a></li>
-                    </ul>
+                        <ul class="ul" id="menu-list">
+                            <li><a href="../Home/index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropbtn">Saúde Mental</a>
+                                <div class="dropdown-content">
+                                    <a href="../SaudeMental/saude-mental.html"><h5>O Que é Saúde Mental?</h5></a>
+                                    <a href="../ComoseCuidar/como-se-cuidar.html"><h5>Como Se Cuidar?</h5></a>
+                                </div>
+                            </li> 
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropbtn">Publicações</a>
+                                <div class="dropdown-content">
+                                    <a href="../Videos/videos.html"><h5>Videos</h5></a>
+                                    <a href="../CriarPublicações/frontend.php"><h5>Posts</h5></a>
+                                    <a href="../Publicacoes/publicacoes.html"><h5>Livros</h5></a>
+
+                                </div>
+                            </li>
+                            <li><a href="../comentarios/index.php">Comentários</a></li>
+                            <li><a href="../meu_projeto/visualizar.php">Profissionais</a></li>
+                     
+                            <li><a href="../Login/index.html"><img src="../../img/user.png"></a></li>
+                        
+                        </ul>              
                     <div class="menu-icon">
                         <img src="../../img/menu.png" alt="menu">
                     </div>
                 </nav>
             </div>
+
         </header>
-        
         <main>
+            <section>
+            <div class="logo">
+                <img src="../../img/de-maos-dadas (1).png" alt="Logo" />
+                <div class="text-container">
+                    <a class="logoImg" href="index.html">SIFAPS</a>
+                    <p>Sistema familiar de Apoio à Saúde Mental</p>
+                </div>
+            </div>
+            </section>
             <div class="container">
                 <div class="main-text">
                     <h1>ALÉM DO SOFRIMENTO INDIVIDUAL</h1>
-                    <h2>Moderno & Classico</h2>
+                    <h2></h2>
                     <div>
-                        <button class="btn-gradient">Reservar Agora</button>
-                        <img src="../../img/verificado.png" alt="verificado">
+                        <div class="container">
+                            <div class="center">
+                              <button class="btn" onclick="window.location.href='../Cadastrar/cadastro.html'">
+                                <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+                                  <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                  <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                                </svg>
+                                <span>  FAÇA SUA INSCRIÇÃO </span>
+                              </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="main-img">
-                    <img src="../../img/img1.png" alt="3 homens sorrindo">
+                    <img src="../../img/image1.png" alt="3 homens sorrindo">
                 </div>
             </div>
         </main>
-    </div>
+   </div>
 
     <section class="resultados">
-        <div class="container">
-            <div class="resultados-text">
-                ESCUTANDO QUEM CUIDA :  QUANDO O CUIDADO AFETA A SAÚDE  DO CUIDADOR 
-        
-            </div>
-           <!---- <div class="resultados-numero">
-                <p>
-                    <span>+50 mil</span><br>
-                    Clientes
-                </p>
-
-                <p>
-                    <span>+20 mil</span><br>
-                    Funcionarios 
-                </p>
-
-                <p>
-                    <span>+60 mil</span><br>
-                    Projetos
-                </p>
-            </div>-->
+        <div class="container resultados-text">
+            ESCUTANDO QUEM CUIDA :  QUANDO O CUIDADO AFETA A SAÚDE  DO CUIDADOR
         </div>
-    </section>
+   
 
-    <section class="diferencias">
-        <div class="container">
-            <div class="card">
-                <img src="../../img/medal.png" alt="medalha">
-                <h3 class="titulo">Empresa Profissional</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, reprehenderit eius aliquid quisquam repellendus dolor iure numquam neque. Porro accusamus consequuntur voluptates, aperiam dolores obcaecati nemo dignissimos accusantium officia quidem!</p>
-            </div>
-            <div class="card">
-                <img src="../../img/24h.png" alt="24 horas">
-                <h3 class="titulo">Consultoria 24 Horas</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, reprehenderit eius aliquid quisquam repellendus dolor iure numquam neque. Porro accusamus consequuntur voluptates, aperiam dolores obcaecati nemo dignissimos accusantium officia quidem!</p>
-            </div>
-            <div class="card">
-                <img src="../../img/caixa.png" alt="caixa">
-                <h3 class="titulo">Servindo em varios paises</h3>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis, reprehenderit eius aliquid quisquam repellendus dolor iure numquam neque. Porro accusamus consequuntur voluptates, aperiam dolores obcaecati nemo dignissimos accusantium officia quidem!</p>
-            </div>
+    <div class="containerini"> <!-- REbeca 23/10/2024-->
+        <p class="pini">Cuidar de um familiar com transtornos apesar do amor e dedicação, é normal se sentir cansado, sobrecarregado e até 
+            emocionalmente esgotado.<br>
+             Cuidar de alguém exige muito, e o peso das responsabilidades pode afetar não só sua rotina, mas também sua saúde 
+             física e emocional. 
+            <br>Vamos juntos encontrar o apoio necessario?<br>
+            Conecte-se com quem entende o que você está passando e cuide também de você!</p>
+
+    </div>
+</section>
+<section class="diferencias"><!-- REbeca 23/10/2024-->
+    <div class="container">
+        <div class="card">
+            <p><br><br>"Cuidar de um familiar com transtornos é um desafio imenso, e é normal sentir-se sobrecarregado.
+                 Lembre-se de que é fundamental cuidar de si mesmo também. 
+                 Busque apoio quando precisar, estabeleça limites saudáveis e não hesite em buscar ajuda profissional. 
+                Você não está sozinho nessa jornada; cuide-se para poder cuidar melhor."</p>
+            <img src="../../img/ana.jpg" alt="medalha">
+            <h3 class="titulo">Dr. Ana Carvalho <br>
+                CRP 855721/25SP
+
+            </h3>
         </div>
-    </section>
-
-    <section class="casa">
-        <div class="container">
-           <div class="casa-img">
-             <img src="../../img/casa.png" alt="casa">
-           </div>
-            <div class="casa-text">
-                <h2>Construção de Casa Particulares</h2>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe quaerat minus quos ex repellat incidunt, totam suscipit corporis architecto pariatur odio facilis eius reprehenderit corrupti repellendus dignissimos repudiandae itaque molestias!</p>
-                <img src="../../img/user-happy.png" alt="">
-                <p>
-                    <b>+50 usuarios felizes</b>
-                </p>
+        <div class="card">
+            <p>"Conviver com um familiar com transtornos pode ser uma tarefa desafiadora e, muitas vezes, exaustiva.
+                 É crucial não negligenciar seu próprio bem-estar para manter o equilíbrio. 
+                 Encontre momentos para fazer atividades que tragam prazer, como ler, cultivar plantas,
+                  desenhar, dar uma caminhada ou preparar uma refeição especial. Essas pausas podem renovar suas energias. 
+                  Lembre-se de que buscar suporte e definir limites é essencial.
+                 Você não está sozinho nessa jornada; cuidar de si mesmo é fundamental para oferecer um cuidado ainda melhor ao outro.</p>
+            <img src="../../img/psco2.jpg" alt="24 horas">
+            <h3 class="titulo">Dr. Rafaela Silva <br>
+                CRP 12548/15SP
+            </h3>
+        </div>
+        <div class="card">
+            <p>Não se sinta culpada por estar cansada ou precisar de uma pausa ,isso é totalmente normal.
+                 Tente tirar um tempinho pra você, seja pra assistir algo que gosta, ouvir música ou fazer exercícios leves. 
+                 Essas pequenas coisas podem melhorar seu bem-estar. Não hesite em pedir ajuda ou dividir responsabilidades.
+                 Você não precisa carregar tudo sozinha; cuidar de si mesma é essencial pra poder continuar ajudando quem precisa."</p>
+            <img src="../../img/psco3.jpg" alt="caixa">
+            <h3 class="titulo">Dra. Marino Costa <br>
+                CRP 124563/65SP
+            </h3>
+        </div>
+    </div>
+</section>
+<div class="botao"><!-- REbeca 23/10/2024-->
+    <button class="btn-ver-mais"><a href="../meu_projeto/visualizar.php" class="link-sublinhado">Ver Mais</a></button>
+    <div id="mais-conteudo">
+        <section class="diferencias">
+            <div class="container">
+                <div class="card">
+                    <img src="../../img/psi2.jpg" alt="medalha">
+                    <h3 class="titulo">Dr. Ana Carvalho <br>
+                        CRP XXXXXX
+    
+                    </h3>
+                    <p>Dr. Ana Carvalho é uma psicóloga clínica com mais de 15 anos de experiência em terapia cognitivo-comportamental. Formada pela Universidade de São Paulo, Ana tem um interesse especial em ajudar indivíduos a superar transtornos de ansiedade e depressão. Além de sua prática clínica, ela é conhecida por suas contribuições acadêmicas, tendo publicado vários artigos sobre técnicas de intervenção e gestão do estresse. Ana é também uma defensora ativa da saúde mental e frequentemente realiza palestras para desmistificar o estigma associado a problemas psicológicos</p>
+                </div>
+                <div class="card">
+                    <img src="../../img/psi1.jpg" alt="24 horas">
+                    <h3 class="titulo">Dr. Rafael Silva <br>
+                        CRP XXXXXX
+                    </h3>
+                    <p>O Dr. Rafael Silva é um psicólogo organizacional com 10 anos de experiência em desenvolvimento de equipes e coaching executivo. Graduado pela Universidade Federal do Rio de Janeiro, Rafael se especializou em ajudar empresas a melhorar a dinâmica de grupo e a liderança dentro das organizações. Ele utiliza uma abordagem integrativa que combina teorias de psicologia positiva com técnicas de gestão de mudanças para maximizar o potencial dos funcionários e promover um ambiente de trabalho saudável e produtivo.</p>
+                </div>
+                <div class="card">
+                    <img src="../../img/psi3.jpg" alt="caixa">
+                    <h3 class="titulo">Dra. Mariana Costa <br>
+                        CRP XXXXXX
+                    </h3>
+                    <p>Dra. Mariana Costa é uma psicóloga infantil e adolescente com uma abordagem inovadora e centrada na família. Formada pela Universidade Federal de Minas Gerais, Mariana trabalha com crianças e adolescentes que enfrentam dificuldades emocionais e comportamentais, utilizando métodos de terapia baseada em jogos e intervenções familiares. Ela é conhecida por sua habilidade em criar ambientes terapêuticos seguros e acolhedores, e também realiza workshops para pais, ajudando-os a entender melhor as necessidades emocionais de seus filhos e a desenvolver estratégias de apoio eficazes.</p>
+                </div>
             </div>
-        </div>
-        <div>
+        </section>
+    </div>
+</div>
+<!-- REbeca 23/10/2024-->
+<script>
+    function mostrarMais() {
+        const maisConteudo = document.getElementById('mais-conteudo');
+        if (maisConteudo.style.display === 'none') {
+            maisConteudo.style.display = 'block';
+        } else {
+            maisConteudo.style.display = 'none';
+        }
+    }
+</script><!-- REbeca 23/10/2024-->
 
+<section class="casa">
+    <div class="container">
+       <div class="casa-img">
+         <img src="../../img/imageini.jpg" alt="cansado">
+       </div>
+        <div class="casa-text">
+            <h2>Sobrecarga da família</h2><br><!-- REbeca 23/10/2024-->
+            <p>
+                A sobrecarga familiar acontece quando alguém cuida de um familiar com transtornos mentais, 
+                assumindo muitas responsabilidades que geram cansaço físico e emocional. O cuidador lida com estresse constante, 
+                mudanças na rotina e sentimentos de culpa por estar esgotado. Essa pressão pode causar isolamento,
+                 ansiedade e até negligência do próprio bem-estar. Dividir tarefas, buscar ajuda profissional e reservar
+                 tempo para si são essenciais para aliviar essa sobrecarga e manter o equilíbrio.
+            </p>
         </div>
-    </section>
+    </div>
+    <div>
 
+    </div>
+</section>
+
+    
     <section class="melhores-lugares">
-        <div class="container">
-            <p class="azul">Escolha o seu melhor</p>
-            <h2>30 melhores lugares do mundo</h2>
+        <div class="container1">
+            <h2 class="sug">SUGESTÕES PARA TE AJUDAR</h2>
             <div class="cards">
                 <div class="card-item">
-                    <img src="../../img/casa1.png" alt="">
-                    <p class="local-casa">Los Angeles, USA</p>
-                    <p class="nome-casa">Be Home</p>
-                    <p class="contato">
-                        12-997551003 <br>
-                        moisesdsilva02@gmail.com
-                    </p>
-                    <button>3 propriedades</button>
+                    <img src="../../img/manualsaudementallivro.jpg" alt="Capa do Livro 1" />
+                    <p> <strong>Livro:</strong> Manual Da Saúde Mental</p>
+                    <p><strong>Autor:</strong> Ana Karoline de Almeida Mendes</p><br>
+                
+                    <button class="modal-trigger"> <a href="https://www.editoracrv.com.br/produtos/detalhes/36095-manual-de-saude-mental" target="_blank">Comprar</a></button>
                 </div>
                 <div class="card-item">
-                    <img src="../../img/casa2.png" alt="">
-                    <p class="local-casa">Los Angeles, USA</p>
-                    <p class="nome-casa">Be Home</p>
-                    <p class="contato">
-                        12-997551003 <br>
-                        moisesdsilva02@gmail.com
-                    </p>
-                    <button>3 propriedades</button>
+                    <img src="../../img/geraçao.jpg" alt="Capa do Livro 4" />
+                    <p> <strong>Livro:</strong> Ansiedade:Domine</p>
+                    <p><strong>Autor:</strong> Juliano Pimentel</p><br>
+                    <button class="modal-trigger"> <a href="https://www.amazon.com/-/he/Juliano-Pimentel/dp/6550471176" target="_blank">Comprar</a></button>
                 </div>
                 <div class="card-item">
-                    <img src="../../img/casa3.png" alt="">
-                    <p class="local-casa">Los Angeles, USA</p>
-                    <p class="nome-casa">Be Home</p>
-                    <p class="contato">
-                        12-997551003 <br>
-                        moisesdsilva02@gmail.com
-                    </p>
-                    <button>3 propriedades</button>
+                    <img src="../../img/ansiedadelivro.jpg" alt="Capa do Livro 3" />
+                    <p> <strong>Livro:</strong> Ansiedade - Como Enfrentar</p>
+                    <p><strong>Autor:</strong> Augusto Cury</p><br>
+                    <button class="modal-trigger"> <a href="https://www.amazon.com.br/Ansiedade-Como-Enfrentar-Mal-S%C3%A9culo/dp/8502218484" target="_blank">Comprar</a></button>
                 </div>
             </div>
         </div>
     </section>
 
+    <div class="botao"><!-- REbeca 23/10/2024-->
+        <button class="btn-ver-mais"><li> <a href="../Publicacoes/publicacoes.html">Ver Mais</a></li></button> 
+    </div>
     <section class="newsletter">
-        <div class="container">
+        <div class="container-newsletter">
             <div class="box-newsletter">
-                <h2>Subscreva-se na nossa Newsletter</h2>
-                <p>se inscreva e fique por dentro das novidades</p>
-                <form action="">
-                    <input type="email" placeholder="Digite o seu email">
-                    <button>Subscreva</button>
-                </form>
+                <h3>Desenvolvido por:</h3><br></br>
+                <div class="image-container">
+                    <div class="image-item">
+                        <img src="../../img/sara.jpg" alt="Desenvolvedor 1">
+                        <p>Sara </p>
+                    </div>
+                    <div class="image-item">
+                        <img src="../../img/rebeca.jpg" alt="Desenvolvedor 2">
+                        <p>Rebeca </p>
+                    </div>
+                    <div class="image-item">
+                        <img src="../../img/img3.jpg" alt="Desenvolvedor 3">
+                        <p> Moisés</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="../../img/img7.jpg" alt="Desenvolvedor 4">
+                        <p>Luiz</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="../../img/img5.jpg" alt="Desenvolvedor 5">
+                        <p>Kleber</p>
+                    </div>
+                    <div class="image-item">
+                        <img src="../../img/img6.jpg" alt="Desenvolvedor 6">
+                        <p>Guilherme </p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <footer>
         <div class="container">
-            <ul>
-                <h3>MRstudio</h3>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Error beatae enim quam nesciunt atque eos deleniti adipisci nostrum tenetur, consequuntur accusamus ut? Assumenda blanditiis sit ut doloribus tempore sint vel?</p>
-                <div class="redes-sociais">
-                    <img src="../../img/facebook.png" alt="Facebook">
-                    <img src="../../img/twitter.png" alt="X">
-                    <img src="../../img/instagram.png" alt="Instagram">
-                    <img src="../../img/linkedin.png" alt="Linkedin">
-                </div>
-            </ul>
-            <ul>
-                <h3>Links</h3>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Preços</a></li>
-                <li><a href="#">Baixa</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Serviços</a></li>
-            </ul>
-            <ul>
-                <h3>FAQ</h3>
-                <li><a href="#">Como funciona</a></li>
-                <li><a href="#">Caraccteristicas</a></li>
-                <li><a href="#">Contato</a></li>
-                <li><a href="#">Sobre</a></li>
-                <li><a href="#">Comunicando</a></li>
-            </ul>
-            <ul>
-                <h3>Nos Contate</h3>
-                <li><p>(11) 99999-9999</p></li>
-                <li><p>email@email.com</p></li>
-                <li><p>BRASIL</p></li>
-            </ul>
+        <ul>
+            <h3 class="colorido">SIFAPS</h3><!-- REbeca 23/10/2024-->
+            <p>
+                Sifaps é uma forma de oferecer apoio e informação para familiares de pessoas com transtornos.<!-- REbeca 23/10/2024-->
+                 Reconhecemos os desafios emocionais e práticos que essas famílias enfrentam e queremos ser uma fonte de recursos e orientação.
+                 Acreditamos que, ao promover a compreensão e a empatia, podemos fortalecer o suporte a esses indivíduos. 
+                No Sifaps, buscamos criar um espaço seguro e acolhedor, onde todos possam encontrar amor, esperança e ferramentas para enfrentar essa jornada.</p>
+            <div class="redes-sociais">
+                <img src="../../img/facebook.png" alt="Facebook">
+                <img src="../../img/twitter.png" alt="X">
+                <img src="../../img/instagram.png" alt="Instagram">
+                <img src="../../img/linkedin.png" alt="Linkedin">
+            </div>
+        </ul>
+        <ul>
+            <h3>Links</h3>
+            <li><a href="#">Home</a></li><!-- REbeca 23/10/2024-->
+            <li><a href="#">Saúde Mental</a></li>
+            <li><a href="#">Publicações</a></li>
+            <li><a href="#">Videos</a></li>
+            <li><a href="#">Livros</a></li>
+        </ul>
+        <ul>
+            <h3>FAQ</h3>
+            <li><a href="#">Como funciona</a></li>
+            <li><a href="#">Caraccteristicas</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a href="#">Sobre</a></li>
+            <li><a href="#">Comunicando</a></li>
+        </ul>
+        <ul>
+            <h3>Nos Contate</h3>
+            <li><p>(35)997317199</p></li>
+            <li><p>email@email.com</p></li>
+            <li><p>BRASIL</p></li>
+        </ul>
+    </div>
+    <!-- Botão que abrirá o modal -->
+    <button class="openModalBtn" id="openModalBtn">ÀREA RESTRITA <img src="../../img/cadeado.png" width="13%"/></button>
 
+    
+
+        <!-- Modal -->
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="closeModalBtn" class="close-btn">&times;</span>
+                <h2>Área de Login</h2>
+                <form id="loginForm">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="password">Senha:</label>
+                    <input type="password" id="password" name="password" required>
+                    
+                    <button class="button-area-restrita" type="submit">Entrar</button>
+                </form>
+            </div>
         </div>
-    </footer>
-
-    <script src="../Menu/main.js"></script>
+</footer>
+    <script src="main.js"></script>
+    <script src="area-restrita.js"></script>
+    <script src="../Menu/ocultar-item-menu.js"></script>
 </body>
 </html>

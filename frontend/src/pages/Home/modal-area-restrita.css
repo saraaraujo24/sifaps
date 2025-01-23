@@ -1,0 +1,100 @@
+/* O Modal */
+.modal {
+    display: none; /* Modal começa escondido */
+    position: fixed;
+    z-index: 1; /* Fica acima do conteúdo da página */
+    left: 0;
+    top: 0;
+    width: 100%; /* Largura total */
+    height: 100%; /* Altura total */
+    background-color: rgba(0, 0, 0, 0.5); /* Fundo escurecido */
+}
+
+/* O conteúdo do modal */
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 8px;
+}
+
+/* Botão de fechar */
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 10px;
+    cursor: pointer;
+}
+
+/* Efeito no botão de fechar */
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo do formulário */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    text-align: left;
+    color: #21879D;
+}
+
+h2{
+    color: #21879D;  
+}
+
+input {
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #21879D;
+    border-radius: 4px;
+}
+
+.button-area-restrita {
+    padding: 10px;
+    border: 2px solid #21879D; /* Define uma borda verde */
+    background-color: rgba(255, 255, 255, 0.041);   /* Fundo branco */
+    color: #21879D;            /* Texto verde */
+    cursor: pointer;
+    border-radius: 4px;        /* Bordas arredondadas */
+    transition: background-color 0.3s ease; /* Transição suave no hover */
+}
+
+.button-area-restrita:hover {
+    background-color: #21879D; /* Fundo verde escuro no hover */
+    color: white;              /* Texto branco no hover */
+}
+
+.openModalBtn {
+    padding: 10px 15px;
+    border: 2px solid #22505a; /* Define uma borda verde */
+    background-size: 400%; /* Velocidade da animação no hover */
+    animation: border-shine 2s linear infinite; /* Animação de brilho */
+    color: white; /* Texto branco no hover */
+    background: linear-gradient(90deg,   #22505a, #16b6da,   #22505a) border-box;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+.openModalBtn:hover {
+    background-size: 400%; /* Velocidade da animação no hover */
+    animation: border-shine 2s linear infinite; /* Animação de brilho */
+    color: white; /* Texto branco no hover */
+    background: linear-gradient(90deg,  #21879D, #16b6da,  #21879D) border-box;
+}
+

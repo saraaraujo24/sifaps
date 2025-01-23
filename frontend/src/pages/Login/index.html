@@ -5,41 +5,59 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="login.css"/>
-  <link rel="stylesheet" href="../Menu/menu.css"/>
-  
+  <link rel="stylesheet" href="../Home/style.css"/>
+  <link rel="stylesheet" href="../Home/dropdown.css"/>
   <title>Login</title>
 </head>
 <body >
-  <div id="box">
-    <p id="output"></p>
-  </div>
-  <div >
-      <div class="menu">
-          <nav>
-              <div class="menu-icon" id="menuToggle">
-                  <span></span>
-                  <span></span>
-                  <span></span>
-              </div>
-              <div class="close-icon" id="closeMenu" >&times;</div>
-              <ul class="ul">
-                  <li><a href="../Home/index.html">Home</a></li>
-                  <li><a href="../Home/saude-mental.html">Saúde Mental</a></li>
-                  <li><a href="../Home/publicaçao.html">Publicações</a></li>
-                  <li><a href="../Home/comentarios.html">Comentários</a></li>
-                  <li><a href="../Home/profissionais.html">Profissionais</a></li>
-                  <li><a href="../Perfil/perfil.html">Perfil</a></li>
-                  <li><a href="../Login/index.html"><img src="../../img/area1.png"></a></li>
-              </ul>
-              <div class="faixa-horizontal"></div>
-          </nav>
-      </div>
-  </div>
+      <!-- inicio do menu-->
+      <div id="box">
+        <p id="output"></p>
+    </div>
+      <div class="background-verde">
+        <header>
+            <div class="menu">
+                <nav>
+                        <ul class="ul" id="menu-list">
+                            <li><a href="../Home/index.html">Home</a></li>
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropbtn">Saúde Mental</a>
+                                <div class="dropdown-content">
+                                    <a href="../SaudeMental/saude-mental.html"><h5>O Que é Saúde Mental?</h5></a>
+                                    <a href="../ComoseCuidar/como-se-cuidar.html"><h5>Como Se Cuidar?</h5></a>
+                                </div>
+                            </li> 
+                            <li class="dropdown">
+                                <a href="javascript:void(0)" class="dropbtn">Publicações</a>
+                                <div class="dropdown-content">
+                                    <a href="../Videos/videos.html"><h5>Videos</h5></a>
+                                    <a href="../CriarPublicações/frontend.php"><h5>Posts</h5></a>
+                                    <a href="../Publicacoes/publicacoes.html"><h5>Livros</h5></a>
+
+                                </div>
+                            </li>
+                            <li><a href="../comentarios/index.php">Comentários</a></li>
+                            <li><a href="../meu_projeto/visualizar.php">Profissionais</a></li>
+                     
+                            <li><a href="../Login/index.html"><img src="../../img/user.png"></a></li>
+                        
+                        </ul>              
+                    <div class="menu-icon">
+                        <img src="../../img/menu.png" alt="menu">
+                    </div>
+                </nav>
+            </div>
+
+        </header>
+        <div class="faixa-horizontal"></div>
+    </div>
+    <!-- fim-->
+
 
   <div class="container1">
     <div class="containerL">
       <div class="image_2login">
-          <img src="../../img/SIFAPS__2_-logo.png" width="20%" height="auto" alt="logo">
+          <img src="../../img/SIFAPS__2_-logo.png"  alt="logo">
       </div>
 
     </div>
@@ -49,51 +67,53 @@
       </div>
       <div class="containerLogin2">
         <div class="page">
-            <form method="POST" class="formLogin">
+          <form method="POST" class="formLogin" id="login-form">
+
               <label>
-                <label>
                   <input type="checkbox" id="userTypeProfessional" />
                   Logar como Profissional
-                </label>
               </label>
-
+          
               <div id="crpContainer" style="display: none;">
-                <label for="crp_crm">CRP/CRM</label>
-                <input type="text" name="crp_crm" placeholder="Digite CRP ou CRM" />
+                  <label for="crp_crm">CRP/CRM</label>
+                  <input type="text" name="crp_crm" placeholder="Digite CRP ou CRM" />
               </div>
-
+          
               <div id="emailContainer">
-                <label for="email">E-mail</label>
-                <input type="email" name="email" placeholder="Digite seu e-mail" autofocus="true" />
+                  <label for="email">E-mail</label>
+                  <input type="email" name="email" placeholder="Digite seu e-mail" />
               </div>
-
+          
               <label for="password">Senha</label>
               <input type="password" name="senha" placeholder="Digite sua senha" />
               <div>
-                <button class="btnLogin">Entrar</button>
-                <button class="btnLogin1">Me Cadastrar</button>
+                  <button class="btnLogin">Entrar</button>
+                  <button type="button" class="btnLogin1"> <a href="../Cadastrar/cadastro.html" >Me Cadastrar</a></button>
+                 
               </div>
-            </form>
+          </form>
+
+          
         </div>
       </div>
     </div>
   </div>
-  <script src="../Menu/main.js"></script>
+  <script src="../Home/main.js"></script>
   <script src="login.js"></script>
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const professionalCheckbox = document.getElementById('userTypeProfessional');
-      const crpContainer = document.getElementById('crpContainer');
-      const emailContainer = document.getElementById('emailContainer');
-
-      // Função para mostrar/ocultar o campo CRP/CRM e e-mail
-      const toggleContainers = () => {
-        crpContainer.style.display = professionalCheckbox.checked ? 'block' : 'none';
-        emailContainer.style.display = professionalCheckbox.checked ? 'none' : 'block';
-      };
-
-      professionalCheckbox.addEventListener('change', toggleContainers);
-    });
-  </script>
+  <script src="../Menu/ocultar-item-menu.js"></script>        
+            <script>
+              // Mostra ou oculta o campo CRP/CRM dependendo do tipo de login (profissional ou usuário comum)
+              document.getElementById('userTypeProfessional').addEventListener('change', function() {
+                  const crpContainer = document.getElementById('crpContainer');
+                  const emailContainer = document.getElementById('emailContainer');
+                  if (this.checked) {
+                      crpContainer.style.display = 'block'; // Mostra o campo CRP/CRM
+                      emailContainer.style.display = 'none'; // Oculta o campo de email
+                  } else {
+                      crpContainer.style.display = 'none'; // Oculta o campo CRP/CRM
+                      emailContainer.style.display = 'block'; // Mostra o campo de email
+                  }
+              });
+              </script>
 </body>
 </html>

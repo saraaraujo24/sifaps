@@ -1,0 +1,17 @@
+-- Criação do banco de dados
+CREATE DATABASE publicacoes_db;
+
+-- Selecionar o banco de dados recém-criado
+USE publicacoes_db;
+
+-- Criação da tabela publicacoes
+CREATE TABLE `publicacoes` (
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
+  `titulo` VARCHAR(255) NOT NULL,
+  `texto` TEXT NOT NULL,
+  `video` VARCHAR(255) NOT NULL,
+  `data_criacao` DATETIME DEFAULT CURRENT_TIMESTAMP,
+  `imagem` VARCHAR(255) DEFAULT NULL,
+  `video_upload` VARCHAR(255) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
